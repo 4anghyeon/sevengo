@@ -20,12 +20,10 @@
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-
     * {
       font-family: 'Gowun Dodum', sans-serif;
     }
 
-   
     body {
       background-color: #8EACCD;
       margin:0;          /*section01 : width 100vw로 해서 하단 가로스크롤이 생김: 안보이게 처리*/
@@ -41,8 +39,9 @@
     }
 
     .section01 {
-      color: white;
-     
+      color: black;
+      background-image: url('./2.jpg'); /*변경필요*/
+
       background-position: center;
       background-size: cover;
 
@@ -53,9 +52,7 @@
 
       width:100vw;  
       margin-left: calc(-50vw + 50%);
-
     }
-
 
     .section02 {
       width: 1200px;
@@ -70,9 +67,6 @@
       height: 600px;
       background-color: #F9F3CC;
     }
-
-
-
     
   </style>
 
@@ -84,7 +78,6 @@
         fetch(url).then(res => res.json()).then(data => {
           //  console.log(data['temp']);
 
-
             let temp = data['temp'];
             if (temp > 20) {
                 $('#msg').text('더움🫠 ');
@@ -94,13 +87,6 @@
             }
            
         })
-
-       
-
-        
-
-
-
 </script>
 
 
