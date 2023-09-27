@@ -9,7 +9,7 @@
     <link href="../css/details.css" rel="stylesheet">
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-    <script src="../js/details.js"></script>
+    <script type="module" src="../js/details.js"></script>
 </head>
 
 <body>
@@ -28,6 +28,16 @@
         <article class="detail-layout">
             <!-- 이곳에 작성 -->
         </article>
+        <div class="comment-container">
+            <h3><span id="memberName"></span>님에게 한마디를 입력해보세요</h3>
+            <div class="comment-box">
+                <textarea id="commentInput" rows="1"></textarea>
+                <button id="commentEnterButton" class="button bg-blue">입력</button>
+            </div>
+            <hr />
+            <div id="commentList" class="comment-list">
+            </div>
+        </div>
     </main>
 </body>
 
