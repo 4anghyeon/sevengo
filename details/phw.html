@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="../css/details.css" rel="stylesheet">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script type="module" src="../js/details.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="button-box">
+            <div>
+                <a href="../index.html"><button type="button" class="button">🏠 메인</button></a>
+            </div>
+            <div>
+                내일배움캠프 미니 프로젝트 7조 7ㅏ즈아
+            </div>
+            <div id="memberButtonBox"></div>
+        </div>
+    </header>
+    <main>
+        <article class="detail-layout">
+            <!-- 이곳에 작성 -->
+        </article>
+        <div class="comment-container">
+            <h3><span id="memberName"></span>님에게 한마디를 입력해보세요</h3>
+            <div class="comment-box">
+                <textarea id="commentInput" rows="1"></textarea>
+                <button id="commentEnterButton" class="button bg-blue">입력</button>
+            </div>
+            <hr />
+            <div id="commentList" class="comment-list">
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
