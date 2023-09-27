@@ -1,0 +1,76 @@
+body {
+    margin: 0 !important;
+    background: rgb(210, 224, 251, 0.2);
+}
+
+.button-box {
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    background: rgb(210, 224, 251, 0.3);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.button-box div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    padding: 10px;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    font-size: 18px;
+    border: none;
+    background: #D7E5CA;
+    box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
+    cursor: pointer;
+}
+
+.member-image:hover + .name {
+    opacity: 1;
+    transform: translateY(10%);
+    box-shadow: 0 10px 20px rgba(86, 86, 198, 0.3);
+}
+
+.member-image {
+    padding: 5px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50% 50%;
+    border: none;
+}
+
+.name-box {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin-right: 10px;
+}
+
+.name {
+    z-index: -10;
+    opacity: 0;
+    transition: all 0.3s;
+    position: absolute;
+    padding: 10px 20px;
+    border-radius: 250px;
+    color: black;
+}
+
+.detail-layout {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    border: rgb(210, 224, 251) solid 2px;
+    background: white;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
