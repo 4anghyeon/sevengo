@@ -13,14 +13,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   </head>
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-
     * {
       font-family: 'Gowun Dodum', sans-serif;
     }
@@ -28,8 +24,6 @@
    
     body {
       background-color: #8EACCD;
-      margin:0;          /*section01 : width 100vw로 해서 하단 가로스크롤이 생김: 안보이게 처리*/
-      overflow-x:hidden; /*section01 : width 100vw로 해서 하단 가로스크롤이 생김: 안보이게 처리*/
     }
 
     .logo{
@@ -39,23 +33,6 @@
       justify-content: center;
 
     }
-
-    .section01 {
-      color: white;
-     
-      background-position: center;
-      background-size: cover;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      width:100vw;  
-      margin-left: calc(-50vw + 50%);
-
-    }
-
 
     .section02 {
       width: 1200px;
@@ -71,12 +48,55 @@
       background-color: #F9F3CC;
     }
 
+    .slider{
+      width: 200vw; /*viewport 200*/
+      transition: transform 0.5s;  /*transform 서서히 변경 부탁 */
+      
+      
+      flex-direction: column;
+      background-size: cover;
+
+     
+    }
+    .inner{
+      width: 100vw; 
+      float: left;  /* 가로로 배치  */
+    }
+    .inner img{
+      width: 100%;  /* 내부 사진 꽉 차게  */
+      height: 500px;
+    }
 
 
-    
+.main-top{
+  position: relative;
+  width: 100vw;
+}
+.main-top:after{
+  content:"";
+  padding-bottom: 100%;
+  display: block;
+}
+
+
+.main{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.main .btn {
+  flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      
+      
+      
+}
+
   </style>
 
-<script >
+<script type="module">
   
         //3. $(document).ready(function()) 기능 필요없어서 바로 꺼내쓰기
         //저장된 데이터 읽기 (getDocs)
@@ -87,20 +107,25 @@
 
             let temp = data['temp'];
             if (temp > 20) {
-                $('#msg').text('더움🫠 ');
+                $('#msg').text('더움 🫠');
             }
             else {
-                $('#msg').text('추움🥶 ');
+                $('#msg').text('추움 🥶');
             }
            
+        })
+
+        $("#btn1").click(async function () {
+          document.querySelector('.slider').style.transform = 'translate(0vw)';
+        })
+
+        $("#btn2").click(async function () {
+          document.querySelector('.slider').style.transform = 'translate(-100vw)';
         })
 
        
 
         
-
-
-
 </script>
 
 
@@ -131,17 +156,26 @@
       </div>
     </header>
 
-    <div class="main">
+    <div class = "main-top">
+    <div class = "main">
           <section class="section01">
-            <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-              <div class="container-fluid py-5">
                 
+                <div style="overflow: hidden; height: 500px;" >
+                    <div class="slider"  >
+                        <div class="inner"><img src="./1.jpg" /></div>
+                        <div class="inner"><img src="./2.jpg" /></div>
+                        
+                    </div>
+                </div>
+
+                <button class ="btn btn-outline-light" id ="btn1">1</button>
+                <button class ="btn btn-outline-light" id ="btn2">2</button>
+               
+
                 
-                <div class="logo"><img src="./images.jfif" /></div>
+                <!-- <div class="logo"><img src="./images.jfif" /></div>
                 <br>
-                <p>7ㅏ즈아 7조 소개소개 (로고 수정 예정)</p>
-              
-            </div>
+                <p>7ㅏ즈아 7조 소개소개 (로고 수정 예정)</p> -->
           </section>
 
           <section class="section02">
@@ -160,6 +194,8 @@
           </div>
         </section>
     </div>
+  </div>
+
 
   </body>
 
