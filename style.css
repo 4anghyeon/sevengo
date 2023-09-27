@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+  }
+body {
+    background: #F9F3CC;
+}
+
+.slider {
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    padding: 36px;
+    background: white;
+    
+}
+
+.slick-dots {
+    bottom: 10px;
+}
+
+.slick-dots li button:before {
+    font-size: 10px;
+    line-height: 10px;
+    color: #fff;
+}
+.myteam{
+    color: #999;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 20px;
+}
+strong{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 35px;
+    margin-top: 14px;
+}
+.us{
+    color: #333;
+    font-size: 16px;
+    line-height: 28px;
+    margin-top: 500px auto;
+}
+.slick-dots { width: 85% !important; }

@@ -1,150 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="css/index.css" rel="stylesheet" />
-    <script src="js/index.js"></script>
-    <title>MAIN PAGE</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-  </head>
- 
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
-    * {
-      font-family: 'Gowun Dodum', sans-serif;
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="css/index.css" rel="stylesheet" />
+  <script src="js/index.js"></script>
+  <title>MAIN PAGE</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+</head>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
+
+  * {
+    font-family: 'Gowun Dodum', sans-serif;
+  }
+
+  body {
+    background-color: #8EACCD;
+    margin: 0;
+    /*section01 : width 100vw로 해서 하단 가로스크롤이 생김: 안보이게 처리*/
+    overflow-x: hidden;
+    /*section01 : width 100vw로 해서 하단 가로스크롤이 생김: 안보이게 처리*/
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+  }
+
+  .section01 {
+    color: black;
+    background-image: url('./2.jpg');
+    /*변경필요*/
+
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  .section02 {
+    /*공간만 만들어놓음: 추후 수정*/
+    width: 1200px;
+    margin: 30px auto 0px auto;
+    height: 600px;
+    background-color: #F9F3CC;
+  }
+
+  .section03 {
+    /*공간만 만들어놓음: 추후 수정*/
+    width: 1200px;
+    margin: 30px auto 30px auto;
+    height: 600px;
+    background-color: #F9F3CC;
+  }
+</style>
+
+<script>
+
+  //3. $(document).ready(function()) 기능 필요없어서 바로 꺼내쓰기
+  //저장된 데이터 읽기 (getDocs)
+  let url = "http://spartacodingclub.shop/sparta_api/weather/seoul";
+  fetch(url).then(res => res.json()).then(data => {
+    //  console.log(data['temp']);
+
+    let temp = data['temp'];
+    if (temp > 20) {
+      $('#msg').text('더움🫠 ');
+    }
+    else {
+      $('#msg').text('추움🥶 ');
     }
 
-    body {
-      background-color: #8EACCD;
-      margin:0;          /*section01 : width 100vw로 해서 하단 가로스크롤이 생김: 안보이게 처리*/
-      overflow-x:hidden; /*section01 : width 100vw로 해서 하단 가로스크롤이 생김: 안보이게 처리*/
-    }
-
-    .logo{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-    }
-
-    .section01 {
-      color: black;
-      background-image: url('./2.jpg'); /*변경필요*/
-
-      background-position: center;
-      background-size: cover;
-
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      width:100vw;  
-      margin-left: calc(-50vw + 50%);
-    }
-
-    .section02 { /*공간만 만들어놓음: 추후 수정*/
-      width: 1200px;
-      margin: 30px auto 0px auto;
-      height: 600px;
-      background-color: #F9F3CC;
-    }
-
-    .section03 { /*공간만 만들어놓음: 추후 수정*/
-      width: 1200px;
-      margin: 30px auto 30px auto;
-      height: 600px;
-      background-color: #F9F3CC;
-    }
-    
-  </style>
-
-<script >
-  
-        //3. $(document).ready(function()) 기능 필요없어서 바로 꺼내쓰기
-        //저장된 데이터 읽기 (getDocs)
-        let url = "http://spartacodingclub.shop/sparta_api/weather/seoul";
-        fetch(url).then(res => res.json()).then(data => {
-          //  console.log(data['temp']);
-
-            let temp = data['temp'];
-            if (temp > 20) {
-                $('#msg').text('더움🫠 ');
-            }
-            else {
-                $('#msg').text('추움🥶 ');
-            }
-           
-        })
+  })
 </script>
 
 
 
-  <body>
-    <header class="p-3 text-bg-dark">
-      <div class="container">
-        <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-          <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-            <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-              <use xlink:href="#bootstrap"></use>
-            </svg>
-          </a>
+<body>
+  <header class="p-3 text-bg-dark">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+            <use xlink:href="#bootstrap"></use>
+          </svg>
+        </a>
 
-          <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 text-success">7ㅏ즈아조</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">홈</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">반가워요</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">반가반가</a></li>
-            <li><a href="#" class="nav-link px-2 text-white">질문하세요</a></li>
-          </ul>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#" class="nav-link px-2 text-success">7ㅏ즈아조</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">홈</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">반가워요</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">반가반가</a></li>
+          <li><a href="#" class="nav-link px-2 text-white">질문하세요</a></li>
+        </ul>
 
-          <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-            <a href="#" class="nav-link px-2 text-white">현재 기온 : <span id="msg"></span></a>
-          </form>
-          
+        <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+          <a href="#" class="nav-link px-2 text-white">현재 기온 : <span id="msg"></span></a>
+        </form>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="main">
+    <section class="section01">
+      <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class="container-fluid py-5">
+          <div class="logo"><img src="./images.jfif" /></div>
+          <br>
+          <p>7ㅏ즈아 7조 소개소개! (로고 수정 예정)</p>
+
+        </div>
+    </section>
+
+    <section class="section02">
+      <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class="container-fluid py-5">
+          <h1>특징과약속</h1>
         </div>
       </div>
-    </header>
+    </section>
 
-    <div class="main">
-          <section class="section01">
-            <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-              <div class="container-fluid py-5">
-                <div class="logo"><img src="./images.jfif" /></div>
-                <br>
-                <p>7ㅏ즈아 7조 소개소개! (로고 수정 예정)</p>
-              
-            </div>
-          </section>
+    <section class="section03">
+      <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class="container-fluid py-5">
+          <h1>팀소개</h1>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="slider">
+    <p><span class="myteam">우리 팀만의 특징.</span><br>
+      <br>
+      <strong>저희 팀은 "최선을 다하며 약속을 지키고 협력하는 행복한 팀"을 모토로 활동하고 있습니다.<Br>
+        우리 팀은 다음과 같은 원칙을 가지고 일합니다.</strong><Br>
+      <Br>
+      <Br>
+      <span class="us">우리는 효율적인 업무 수행을 통해 팀의 성과를 극대화하고자 합니다.<Br>
+        우리는 일을 즐기며 긍정적인 분위기를 유지하려 노력합니다.<Br>
+        우리는 어려움을 극복하며 즐거운 경험을 만들어내는 것을 소중히 여깁니다.<Br>
+        저희 팀은 이러한 가치와 모토를 기반으로 서로 협력하며 성공적인 프로젝트를 이끌어내고, 행복한 업무 환경을 유지하며 함께 성장하고 있습니다.
+    </p></span>
+    <p><span class="myteam">우리 팀만의 약속.</span><br>
+      <br>
+      내일배움캠프 부트캠프 홈페이지에는 이러한 내용이 적혀있습니다.<br>
+      <br>
+      <strong>“IT 취업을 희망하는 누구나 그 꿈을 이룰 수 있습니다.<br>
+        여러분의 꿈이 현실이 되도록, 끝까지 함께합니다.”</strong><br>
+      <br>
+      <br>
+      <span class="us">누군가는 본인의 실력을 향상시키기 위해 들어오고
+        또 누군가는 새로운 도전을 위해 이 곳 내일배움캠프에 들어왔습니다.
+        저희 팀원들 역시 새로운 도전을 위해 이 곳 내일배움캠프에 들어왔습니다.<br>
+        저희팀은 앞으로 남은 수강 기간 동안 끈임없이 배우고 노력하며 서로에게 힘이 되어주고 끝까지 함께하며 노력할 것을 약속 드립니다.
+    </p></span>
 
-          <section class="section02">
-            <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-              <div class="container-fluid py-5">
-                 <h1>특징과약속</h1>
-              </div>
-            </div>
-          </section>
-      
-        <section class="section03">
-          <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-            <div class="container-fluid py-5">
-              <h1>팀소개</h1>
-            </div>
-          </div>
-        </section>
-    </div>
+  </div>
+  <div>
+    3번 구역
+  </div>
+</body>
 
-  </body>
+<script>
+  $('.slider').slick({
+    autoplay: false,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    adaptiveHeight: true
+  });
+</script>
 
-  </html>
+</html>
