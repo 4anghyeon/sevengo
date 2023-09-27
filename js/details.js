@@ -1,3 +1,24 @@
+// Firebase SDK 라이브러리 가져오기
+import {initializeApp} from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js';
+import {getFirestore} from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js';
+import {collection, addDoc} from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js';
+import {getDocs} from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js';
+
+// Firebase 구성 정보 설정
+const firebaseConfig = {
+  apiKey: 'AIzaSyBuU6pe2VYUIoalynNO4w25HcfuZOI0Ig8',
+  authDomain: 'sparta-bada5.firebaseapp.com',
+  projectId: 'sparta-bada5',
+  storageBucket: 'sparta-bada5.appspot.com',
+  messagingSenderId: '678152779933',
+  appId: '1:678152779933:web:fd4d686066c4bbbf7dbc74',
+  measurementId: 'G-J9PY997T6X',
+};
+
+// Firebase 인스턴스 초기화
+const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
+
 const MEMBER_MAP = {
   lsh: {
     name: '이상현',
@@ -20,27 +41,6 @@ const MEMBER_MAP = {
     img: 'test.png',
   },
 };
-
-// Firebase SDK 라이브러리 가져오기
-import {initializeApp} from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js';
-import {getFirestore} from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js';
-import {collection, addDoc} from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js';
-import {getDocs} from 'https://www.gstatic.com/firebasejs/9.22.0/firebase-firestore.js';
-
-// Firebase 구성 정보 설정
-const firebaseConfig = {
-  apiKey: 'AIzaSyBuU6pe2VYUIoalynNO4w25HcfuZOI0Ig8',
-  authDomain: 'sparta-bada5.firebaseapp.com',
-  projectId: 'sparta-bada5',
-  storageBucket: 'sparta-bada5.appspot.com',
-  messagingSenderId: '678152779933',
-  appId: '1:678152779933:web:fd4d686066c4bbbf7dbc74',
-  measurementId: 'G-J9PY997T6X',
-};
-
-// Firebase 인스턴스 초기화
-const app = initializeApp(firebaseConfig);
-const db = getFirestore(app);
 
 // 화면에 표시될 멤버 이름
 let memberName = '';
