@@ -31,17 +31,17 @@ const MEMBER_MAP = {
   khm: {
     name: '김혜민',
     color: '#8EACCD',
-    img: 'test.png',
+    img: 'khm.jpg',
   },
   cmg: {
     name: '최민권',
     color: '#F9F3CC',
-    img: 'test.png',
+    img: 'cmg.png',
   },
   phw: {
     name: '박희원',
     color: '#FFC7EA',
-    img: 'test.png',
+    img: 'hw.jpg',
   },
 };
 
@@ -96,7 +96,7 @@ for (let member in MEMBER_MAP) {
     `<div class="name-box">
         <a href=${
           member + '.html'
-        }><img src="../assets/img/${img}" class="button member-image" style="background-color: ${color}" alt="${name}" />
+        }><div class="button member-image" style="background-color: ${color}; background-image: url('../assets/img/${img}'); background-size: cover" ></div>
         <div class="name" style="background-color: ${color}">${name}</div>
         </a>
       </div>`,
