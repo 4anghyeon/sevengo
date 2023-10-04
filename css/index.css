@@ -1,0 +1,87 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.image {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    padding: 5px;
+    border: 1px solid transparent;
+}
+
+.image .profile-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.korname {
+    text-align: center;
+    margin-top: 10px;
+    font-weight: normal;
+}
+
+.engname {
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+body {
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.profile-card {
+    width: 200px;
+    height: 400px;
+    background-color: #d7e5ca;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 5px 5px gray;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.mybtn {
+    display: inline-block;
+    background-color: white;
+    border-color: gray;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: grey;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    align-items: center;
+    position: relative;
+}
+
+.mybtn1:hover {
+    background-color: lightgray;
+}
+
+.btncenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.title {
+    margin-bottom: 50px;
+    font-size: 60px;
+    color: rgba(56, 56, 56, 0.678);
+    text-shadow: 0px 3px 4px;
+    text-align: center;
+}
+
+.myinfo {
+    text-align: center;
+}
