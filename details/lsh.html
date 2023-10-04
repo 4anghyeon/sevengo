@@ -10,7 +10,64 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <script type="module" src="../js/details.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 </head>
+<style>
+    .introduce {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .name-1 {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .name-2 {
+        margin-left: 10px;
+        font-weight: bold;
+        font-size: 2rem;
+    }
+    .profile-img {
+        border-radius: 5%;
+        width: 200px;
+    }
+
+    .private-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+
+    .introduce-detail-box {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .introduce-detail-box div {
+        padding: 20px;
+        margin: 10px;
+        width: 25vw;
+    }
+
+    .sub-title {
+        background: #F9F3CC;
+        border-radius: 15px;
+        padding: 10px 10px 10px 15px;
+        width: 100%;
+    }
+
+    .introduce-detail-box p {
+        padding: 0 10px 10px 15px;
+    }
+
+    a {
+        color: black;
+    }
+</style>
 
 <body>
     <header>
@@ -27,12 +84,40 @@
     <main>
         <article class="detail-layout">
             <!-- 이곳에 작성 -->
+            
+            <div class="introduce">
+                <span class="name-1">HELLO I'M</span><span class="name-2">SANGHYEON</span>
+                <div style="display: flex; padding-top: 20px">
+                    <img src="../assets/img/lsh-thumb.png" class="profile-img" alt="sanghyeon image"/>
+                    <div class="private-info">
+                        <h3>HOW TO CONTACT</h3>
+                        <span>📞 Phone: <a href="tel:010-9338-3810">010-9338-3810</a></span>
+                        <span>📧 Email: <a target="_blank" href="mailto:4anghyeon@gmail.com">4anghyeon@gmail.com</a></span>
+                        <span>🐱 Github: <a href="https://github.com/4anghyeon">4anghyeon</a></span>
+                    </div>
+                </div>
+            </div>
+            <div class="introduce-detail-box">
+                <div>
+                    <h3 class="sub-title">저는...</h3>
+                    <p>안녕하세요 이번 내일배움캠프 React 트랙에 참가하게 된 <strong>이상현</strong>입니다. MBTI는 INFJ이고, 94년생입니다. 앞으로 남은 5개월 잘 부탁드리겠습니다~</p>
+                </div>
+                <div>
+                    <h3 class="sub-title">장점</h3>
+                    <p>어떠한 문제가 생겼을 때 단순한 해결책만 찾지 않고, 근본적인 문제까지 알아내고, 그 과정을 미래의 나 혹은 타인에게 도움이되고자 항상 기록을 남긴다는 습관이 있습니다.</p>
+                </div>
+                <div>
+                    <h3 class="sub-title">협업 스타일</h3>
+                    <p>팀에 피해를 주지 않도록 맡은 바를 최대한 해내는 편입니다. 또한 팀원의 의견을 수용적으로 듣고, 코딩 중 알아낸 정보, 지식들을 혼자 갖고 있지 않고 팀원 모두에게 공유합니다.</p>
+                </div>
+            </div>
+        
         </article>
         <div class="comment-container">
             <h3><span id="memberName"></span>님에게 한마디를 입력해보세요</h3>
             <div class="comment-box">
                 <textarea id="commentInput" rows="1"></textarea>
-                <button id="commentEnterButton" class="button bg-blue">입력</button>
+                <button id="commentEnterButton" class="button bg-green">입력</button>
             </div>
             <hr />
             <div id="commentList" class="comment-list">
