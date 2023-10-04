@@ -20,6 +20,7 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/23079e924b.js" crossorigin="anonymous"></script>
 </head>
 
 <style>
@@ -31,18 +32,6 @@
 
     body {
         background-color: #8EACCD;
-        margin: 0;
-        /*section01 : width 100vw로 해서 하단 가로스크롤이 생김: 안보이게 처리*/
-        overflow-x: hidden;
-        /*section01 : width 100vw로 해서 하단 가로스크롤이 생김: 안보이게 처리*/
-    }
-
-    .logo {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-
     }
 
     .section01 {
@@ -59,12 +48,8 @@
         align-items: center;
         justify-content: center;
 
+        
         width: 100vw;
-        margin-left: calc(-50vw + 50%);
-    }
-
-    .volumn {
-        height: 40px;
     }
 </style>
 
@@ -88,26 +73,24 @@
 
 
 <body>
-    <header class="p-3 text-bg-dark">
-        <div class="container">
-            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
-                        <use xlink:href="#bootstrap"></use>
-                    </svg>
-                </a>
-
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                    <li><a href="#" class="nav-link px-2 text-success">7ㅏ즈아조</a></li>
-                </ul>
-
-                <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                    <a href="#" class="nav-link px-2 text-white">현재 기온 : <span id="msg"></span></a>
-                </form>
-
+    <header>
+        <nav class = "navbar">
+            <div class="nav_logo">
+                <i class="fa-regular fa-thumbs-up fa-bounce fa-xl"></i>
+                <a href="">7ㅏ즈아조</a>
             </div>
-        </div>
+            <div class="nav_menu">
+                <li><a href="https://velog.io/@sanghyeon">상현</a></li>
+                <li><a href="https://heenee.tistory.com/">희원</a></li>
+                <li><a href="https://velog.io/@stow1234">민권</a></li>
+                <li><a href="https://zerotonine2da.tistory.com/">혜민</a></li>
+            </div>
+            <div class="nav_link">
+                <a href="#" class="nav-link px-2 text-white">현재 기온 : <span id="msg"></span></a>
+            </div>
+        </nav>
     </header>
+
 
     <div class="main">
 
