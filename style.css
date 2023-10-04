@@ -86,8 +86,8 @@ strong{
     border-radius: 25px;
     padding: 25px;
     box-shadow: 0 5px 5px gray;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 10px auto;
+    margin-right: 10px auto;
 }
 
 .mybtn {
@@ -100,7 +100,7 @@ strong{
     cursor: pointer;
     transition-duration: 0.4s;
     align-items: center;
-    position: relative
+    position: relative; bottom: 10px;
 }
 
 .mybtn1:hover {
@@ -111,7 +111,8 @@ strong{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 30px;
+    margin-top: 30px ;
+    margin-bottom: 30px;
 }
 
 .title {
