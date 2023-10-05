@@ -23,7 +23,7 @@ hr {
     display: flex;
     justify-content: space-between;
     align-content: center;
-    padding: 20px;
+    padding: 10px;
     margin: 20px;
     border-radius: 10px;
     background: rgb(210, 224, 251, 0.3);
@@ -52,6 +52,10 @@ hr {
     background: rgb(142, 172, 205);
 }
 
+.bg-green {
+    background: #D7E5CA;
+}
+
 .member-image:hover + .name {
     opacity: 1;
     transform: translateY(10%);
@@ -60,8 +64,8 @@ hr {
 
 .member-image {
     padding: 5px;
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     border-radius: 50% 50%;
     border: none;
 }
@@ -95,7 +99,7 @@ hr {
 }
 
 .comment-container {
-    padding: 20px;
+    padding: 0 20px 20px 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
