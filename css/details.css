@@ -2,7 +2,10 @@
 
 body {
     margin: 0 !important;
-    background: #8EACCD;
+    background-image: url("../assets/img/movingbg.svg");
+    -o-background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    background-size:cover;
 }
 
 
@@ -26,7 +29,7 @@ hr {
     padding: 10px;
     margin: 20px;
     border-radius: 10px;
-    background: rgb(210, 224, 251, 0.3);
+    background: rgba(249, 243, 204, 0.82);
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
@@ -94,7 +97,7 @@ hr {
     margin: 20px;
     border-radius: 10px;
     border: rgb(210, 224, 251) solid 2px;
-    background: white;
+    background: rgba(255,255,255, 0.7);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
 
