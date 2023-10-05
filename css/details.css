@@ -138,19 +138,20 @@ hr {
     border-radius: 100%;
     object-fit: cover;
     position: relative;
-    left: 455px;
+    left: 405px;
 }
 .p-1{
     font-size: 40px;
     font-weight:700;
-    text-align: center;
+    position: relative;
     font-family: Nanum Pen Script;
     color: #87CEEB;
     float: center;
+    left: 475px;
 }
 .title{
     position: relative;
-    left: 800px;
+    left:700px;
     bottom: 260px;
     margin: 5px;
     line-height : 5px;
@@ -166,13 +167,13 @@ hr {
     font-weight:1200;
     position: relative;
     bottom: 200px;
-    left: 300px;
+    left: 290px;
     text-align: left;
 }
 .material-symbols-outlined{
     text-align: center;
     font-size: 80px;
-    left:270px;
+    left:190px;
     position: relative;
     width: 200px;
 }
@@ -180,18 +181,30 @@ hr {
     position: relative;
     bottom: 200px;
 }
-.submi{
-    position: relative;
-    bottom: 200px;
-    font-size: 13px;
-    left: 320px;
-    letter-spacing : 5px;
-    word-spacing:4em;
-}
 .img-2{
     position: relative;
     border-radius: 50px;
     left: 250px;
-    bottom: 50px;
+    bottom: 200px;
     display: block;
+}
+.p-4{
+    font-size: 20px;
+    position: relative;
+    left: 650px;
+    bottom: 500px;
+    font-weight:1200;
+}
+strong{
+    color: #87CEEB;
+    font-weight:1200;
+}
+.main{
+    margin: 100px;
+}
+.img-3{
+    position: relative;
+    border-radius: 50px;
+    left: 750px;
+    bottom: 300px;
 }
