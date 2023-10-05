@@ -73,9 +73,11 @@ const readComments = async () => {
   docs.forEach(doc => {
     let row = doc.data();
     if (row) {
-      // 화면의 사용자에 대한 댓글만 보여
+      let date = new Date(row.date).toLocaleString('ko-KR');
+      if (date === 'Invalid Date') date = row.date;
+      // 화면의 사용자에 대한 댓글만 보여줌
       if (row.memberName === memberName)
-        $('#commentList').append(`<div><span>${row.comment}</span><span>${row.date}</span></div>`);
+        $('#commentList').append(`<div><span>${row.comment}</span><span>${date}</span></div>`);
     }
   });
 };
