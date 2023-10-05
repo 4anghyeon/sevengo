@@ -26,6 +26,7 @@
     font-weight: normal;
 }
 
+
 .engname {
     text-align: center;
     margin-bottom: 20px;
@@ -36,6 +37,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
 
 }
 
@@ -85,3 +87,75 @@ body {
 .myinfo {
     text-align: center;
 }
+
+.navbar a {  /*혜민작성(nav~관련 css)*/
+    text-decoration: none;
+    color : white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #8EACCD;
+    padding: 8px 12px;
+}
+
+.nav_logo{
+    font-size: 24px;
+    color: white;
+}
+
+.nav_logo i{
+    color: #D7E5CA;
+}
+
+.nav_menu {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.nav_menu li { /*이름끼리 공간마련*/
+    padding : 8px 20px;
+}
+
+.nav_menu li:hover{ /*마우스 올리면 이름에 색상*/
+    background-color: #D7E5CA;
+    border-radius: 4px;
+}
+
+.nav_link{
+    display: flex;
+    padding-left: 0;
+}
+
+
+.nav_bar{
+    position: absolute;
+    right: 32px;
+    font-size: 24px;
+    color :  #D7E5CA;
+}
+
+@media screen and (max-width: 768px){ /*화면이 작아지면 상단 메뉴 유동적으로 변경*/
+    .navbar {
+        flex-direction: column;
+        align-items:flex-start;
+        padding : 8px 12px;
+    }
+    .nav_menu { 
+        flex-direction: column;
+        align-items:center;
+        width: 100%;
+    }
+    .nav_menu li{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+.volumn { /*section간 공간 주기 위해서*/
+    height: 40px;
+}
+
