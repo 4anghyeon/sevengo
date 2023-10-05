@@ -10,6 +10,37 @@
     <title>Document</title>
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <script type="module" src="../js/details.js"></script>
+
+
+   <style>
+        .img-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            text-align: center;
+            gap: 10px;
+            justify-content: center; 
+        }
+    
+        .img-container img {
+            max-width: 30%;
+            height: auto;
+            }
+
+            @media (max-width: 768px) {
+        .img-container img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .title {
+        text-align: center;
+        font-size: 30px;
+        padding-bottom: 20px;
+    }
+        </style>
+
 </head>
 
 <body>
@@ -27,6 +58,17 @@
     <main>
         <article class="detail-layout">
             <!-- 이곳에 작성 -->
+            <div class="title">About Me</div>
+            <div class="img-container">
+                <img src="../assets/img/phw.suwon.jpg" alt="Suwon" width="300" height="400">
+                <img src="../assets/img/phw.swing.jpg" alt="Swing" width="300" height="400">
+                <img src="../assets/img/phw.bali.jpg" alt="Bali" width="300" height="400">
+            </div>
+
+        
+        </div>
+        </div>
+
         </article>
         <div class="comment-container">
             <h3><span id="memberName"></span>님에게 한마디를 입력해보세요</h3>
