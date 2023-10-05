@@ -1,44 +1,168 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="../css/details.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="../css/details.css" rel="stylesheet" />
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="../js/details.js"></script>
-</head>
+  </head>
 
-<body>
+  <style>
+    .container-layout {
+      display: flex;
+      justify-content: center; /*가운데오게*/
+    }
+    .conatiner-cell-layout {
+      border: 15px solid transparent; /* 사진간의 간격*/
+      padding: 0 10px 10px 15px;
+    }
+    .cell-img {
+      max-width: 350px;
+      width: 100%;
+      height: 334px;
+    }
+    .cell-common {
+      text-align: left;
+      height: auto;
+      background-image: none;
+
+      position: relative; /*밑에 색상이 사진 위로 오게*/
+      margin-top: -47px; /*밑에 색상이 사진 위로 오게*/
+
+      margin-right: 20px; /*밑에 색상이 사진보다 작게*/
+      margin-left: 20px; /*밑에 색상이 사진보다 작게*/
+    }
+    .back-color01 {
+      background-color: #f9f3cc;
+    }
+    .back-color02 {
+      background-color: #d7e5ca;
+    }
+    .back-color03 {
+      background-color: #8eaccd;
+    }
+    .cell-common-layout {
+      justify-content: flex-start;
+      flex-direction: column; /*사진 밑에 문구의 첫번째 줄 영향*/
+      display: flex; /*사진 밑에 문구의 첫번째 줄 영향*/
+    }
+    .cell-text {
+      margin: 15px 0 0 20px; /* 문구있는 곳: 선 간격 설정*/
+      margin-right: 16px;
+      font-size: 1.5rem;
+    }
+    .cell-line {
+      border-style: solid; /* 선 그리기 */
+      border-bottom-width: 0; /* 선 얇게 */
+      border-color: black;
+      width: 35px; /* 선 길이 */
+      margin: 25px auto 0 10px;
+    }
+    .cell-word {
+      padding-left: 20px;
+    }
+
+    @media screen and (max-width: 768px) {
+      /*화면이 작아지면 상단 메뉴 유동적으로 변경*/
+      .container-layout {
+        flex-direction: column; /*아이템 방향을 아래로 설정*/
+        align-items: center; /*메뉴는 중간에 정렬하고싶음(중심축:수직)*/
+        width: 100%; /*너비 100%로 설정 안하면 align-items:center 기능이 안보임*/
+      }
+    }
+  </style>
+
+  <body>
     <header>
-        <div class="button-box">
-            <div>
-                <a href="../index.html"><button type="button" class="button">🏠 메인</button></a>
-            </div>
-            <div>
-                내일배움캠프 미니 프로젝트 A02조 7ㅏ즈아
-            </div>
-            <div id="memberButtonBox"></div>
+      <div class="button-box">
+        <div>
+          <a href="../index.html"><button type="button" class="button">🏠 메인</button></a>
         </div>
+        <div>내일배움캠프 미니 프로젝트 A02조 7ㅏ즈아</div>
+        <div id="memberButtonBox"></div>
+      </div>
     </header>
     <main>
-        <article class="detail-layout">
-            <!-- 이곳에 작성 -->
-        </article>
-        <div class="comment-container">
-            <h3><span id="memberName"></span>님에게 한마디를 입력해보세요</h3>
-            <div class="comment-box">
-                <textarea id="commentInput" rows="1"></textarea>
-                <button id="commentEnterButton" class="button bg-blue">입력</button>
-            </div>
-            <hr />
-            <div id="commentList" class="comment-list">
-            </div>
-        </div>
-    </main>
-</body>
+      <article class="detail-layout">
+        <!-- 이곳에 작성 -->
 
+        <div class="container-layout">
+          <div class="conatiner-cell-layout">
+            <img class="cell-img" src="../assets/img/khm-1.jpg" />
+            <div class="cell-common back-color01">
+              <div class="cell-common-layout">
+                <div class="cell-line"></div>
+                <h4 class="cell-text">Who am i</h4>
+                <div class="cell-line"></div>
+                <p class="cell-word">
+                  안녕하세요, 김혜민입니다. <br />
+                  저는 요즘 베이글과 카페라떼를 <br />
+                  너무 좋아하는데요 <br />
+                  그래서 사실,, <br />
+                  아침에 게더 입장해서 빵 먹고있습니다. <br />
+                  5개월동안 잘 부탁드립니다(빵긋)
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="conatiner-cell-layout">
+            <img class="cell-img" src="../assets/img/khm-2.png" />
+            <div class="cell-common back-color02">
+              <div class="cell-common-layout">
+                <div class="cell-line"></div>
+                <h4 class="cell-text">좋아하는 건..</h4>
+                <div class="cell-line"></div>
+                <p class="cell-word">
+                  야외에 있는걸 좋아해서 <br />
+                  카페 테라스나 한강 가는 것을 <br />
+                  정말 좋아하는데요 <br />
+                  그래서 사실,, <br />
+                  주말만 기다리고 있습니다. <br />
+                  5개월동안 참아보겠습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="conatiner-cell-layout">
+            <img class="cell-img" src="../assets/img/khm-1.jpg" />
+            <div class="cell-common back-color03">
+              <div class="cell-common-layout">
+                <div class="cell-line"></div>
+                <h4 class="cell-text">만나서 반가워요</h4>
+                <div class="cell-line"></div>
+                <p class="cell-word">
+                  개발자라는 목표를 가지고 <br />
+                  5개월동안 함께하게 되어 <br />
+                  모두들 반갑습니다.<br />
+                  저도 빠르게 구현하고싶은데<br />
+                  시간이 좀 걸리는 편입니다. <br />
+                  그럼에도 열심히 해보겠습니다.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+      <div class="comment-container">
+        <h3><span id="memberName"></span>님에게 한마디를 입력해보세요</h3>
+        <div class="comment-box">
+          <textarea id="commentInput" rows="1"></textarea>
+          <button id="commentEnterButton" class="button bg-blue">입력</button>
+        </div>
+        <hr />
+        <div id="commentList" class="comment-list"></div>
+      </div>
+    </main>
+  </body>
 </html>
