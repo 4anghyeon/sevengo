@@ -169,3 +169,29 @@ hr {
     left: 300px;
     text-align: left;
 }
+.material-symbols-outlined{
+    text-align: center;
+    font-size: 80px;
+    left:270px;
+    position: relative;
+    width: 200px;
+}
+.mi{
+    position: relative;
+    bottom: 200px;
+}
+.submi{
+    position: relative;
+    bottom: 200px;
+    font-size: 13px;
+    left: 320px;
+    letter-spacing : 5px;
+    word-spacing:4em;
+}
+.img-2{
+    position: relative;
+    border-radius: 50px;
+    left: 250px;
+    bottom: 50px;
+    display: block;
+}
