@@ -67,6 +67,54 @@
     a {
         color: black;
     }
+
+    .flip {
+        width: 200px;
+        height: 250px;
+        position: relative;
+        perspective: 1100px;
+        margin: .4rem;
+    }
+
+    .card {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        transition: .8s;
+        transform-style: preserve-3d;
+    }
+
+    .front, .back {
+        position: absolute;
+        backface-visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+    }
+
+    .back {
+        border: #8EACCD 1px solid;
+        border-radius: 10px;
+        padding: 10px;
+        color: black;
+        background: #D7E5CA;
+        transform: rotateY(180deg);
+        height: 75%;
+        width: 80%;
+    }
+    
+    .card-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 60%;
+    }
+
+    .flip:hover .card {
+        transform: rotateY(180deg);
+    }
+
 </style>
 
 <body>
@@ -88,7 +136,24 @@
             <div class="introduce">
                 <span class="name-1">HELLO I'M</span><span class="name-2">SANGHYEON</span>
                 <div style="display: flex; padding-top: 20px">
-                    <img src="../assets/img/lsh-thumb.png" class="profile-img" alt="sanghyeon image"/>
+                    <div class="flip">
+                        <div class="card">
+                            <!-- 앞면 -->
+                            <div class="front">
+                                <img src="../assets/img/lsh-thumb.png" class="profile-img" alt="sanghyeon image"/>
+                            </div>
+                            <!-- 뒷면 -->
+                            <div class="back">
+                                <div class="card-info">
+                                    <span>이상현</span>
+                                    <span>🎂 1994. 07. 27</span>
+                                    <span>🏡 SEOUL, KOREA</span>
+                                    <span>🧬 INFJ</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
                     <div class="private-info">
                         <h3>HOW TO CONTACT</h3>
                         <span>📞 Phone: <a href="tel:010-9338-3810">010-9338-3810</a></span>
@@ -99,15 +164,15 @@
             </div>
             <div class="introduce-detail-box">
                 <div>
-                    <h3 class="sub-title">저는...</h3>
-                    <p>안녕하세요 이번 내일배움캠프 React 트랙에 참가하게 된 <strong>이상현</strong>입니다. MBTI는 INFJ이고, 94년생입니다. 앞으로 남은 5개월 잘 부탁드리겠습니다~</p>
+                    <h3 class="sub-title">🙋🏻‍♂️ 저는요</h3>
+                    <p>안녕하세요 이번 내일배움캠프 React 트랙에 참가하게 된 <strong>이상현</strong>입니다. 이번 기회를 통해 프론트엔드 개발자로 발돋움 하고자 참여하게 되었습니다! 앞으로 남은 5개월 잘 부탁드리겠습니다~</p>
                 </div>
                 <div>
-                    <h3 class="sub-title">장점</h3>
-                    <p>어떠한 문제가 생겼을 때 단순한 해결책만 찾지 않고, 근본적인 문제까지 알아내고, 그 과정을 미래의 나 혹은 타인에게 도움이되고자 항상 기록을 남긴다는 습관이 있습니다.</p>
+                    <h3 class="sub-title">😎 장점</h3>
+                    <p>어떠한 문제가 생겼을 때 단순한 해결책만 찾지 않고, 근본적인 문제까지 알아내고, 그 과정을 미래의 나 혹은 타인에게 도움이 되고자 항상 기록을 남긴다는 습관이 있습니다.</p>
                 </div>
                 <div>
-                    <h3 class="sub-title">협업 스타일</h3>
+                    <h3 class="sub-title">🤝 협업 스타일</h3>
                     <p>팀에 피해를 주지 않도록 맡은 바를 최대한 해내는 편입니다. 또한 팀원의 의견을 수용적으로 듣고, 코딩 중 알아낸 정보, 지식들을 혼자 갖고 있지 않고 팀원 모두에게 공유합니다.</p>
                 </div>
             </div>
