@@ -1,105 +1,105 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
-    background: #F9F3CC;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .slider {
-    width: 600px;
-    height: 400px;
-    margin: 0 auto;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    padding: 36px;
-    background: white;
-    
+  width: 600px;
+  height: 400px;
+  margin: 0 auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 36px;
+  background: white;
 }
 
 .slick-dots {
-    bottom: 10px;
+  bottom: 10px;
 }
 
 .slick-dots li button:before {
-    font-size: 10px;
-    line-height: 10px;
-    color: #fff;
+  font-size: 10px;
+  line-height: 10px;
+  color: #fff;
 }
-.myteam{
-    color: #999;
-    font-size: 24px;
-    font-weight: 700;
-    line-height: 20px;
+.myteam {
+  color: #999;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 20px;
 }
-strong{
-    font-size: 20px;
-    font-weight: 700;
-    line-height: 35px;
-    margin-top: 14px;
+strong {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 35px;
+  margin-top: 14px;
 }
-.us{
-    color: #333;
-    font-size: 16px;
-    line-height: 28px;
-    margin-top: 500px auto;
+.us {
+  color: #333;
+  font-size: 16px;
+  line-height: 28px;
+  margin-top: 500px auto;
 }
-.slick-dots { width: 85% !important; }
+.slick-dots {
+  width: 85% !important;
+}
 
 .image {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    padding: 5px;
-    border: 1px solid transparent;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 1px solid transparent;
 }
 
 .image .profile-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .korname {
-    text-align: center;
-    margin-top: 10px;
-    font-weight: normal;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: normal;
 }
 
 .engname {
-    text-align: center;
-    margin-bottom: 30px;
-    font-weight: normal;
-    font-size: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: normal;
 }
 
 .profile-card {
-    width: 200px;
-    height: 500px;
-    background-color: #d7e5ca;
-    border-radius: 25px;
-    padding: 25px;
-    box-shadow: 0 5px 5px gray;
-    /* min-height: 450px !important; */
+  width: 200px;
+  height: 400px;
+  background-color: #d7e5ca;
+  border-radius: 25px;
+  padding: 25px;
+  box-shadow: 0 5px 5px gray;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .mybtn {
-    display: inline-block;
-    background-color: white;
-    border-color: gray;
-    padding: 5px 10px;
-    border-radius: 10px;
-    color: grey;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    align-items: center;
-    position: absolute;
+  display: inline-block;
+  background-color: white;
+  border-color: gray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: grey;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  align-items: center;
+  position: relative;
 }
 
 .mybtn.mybtn1{
@@ -109,28 +109,26 @@ strong{
 }
 
 .mybtn1:hover {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 .btncenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px ;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .title {
-    margin-bottom: 50px;
-    font-size: 60px;
-    color: rgba(248, 248, 248, 0.678);
-    text-shadow: 0px 3px 4px;
-    text-align: center;
-    
+  margin-bottom: 50px;
+  font-size: 60px;
+  color: rgba(56, 56, 56, 0.678);
+  text-shadow: 0px 3px 4px;
+  text-align: center;
 }
 
 .myinfo {
-    text-align: center;
+  text-align: center;
 }
 
 

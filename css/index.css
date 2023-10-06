@@ -1,151 +1,211 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .image {
-    position: relative;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    padding: 5px;
-    border: 1px solid transparent;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  padding: 5px;
+  border: 1px solid transparent;
 }
 
 .image .profile-img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .korname {
-    text-align: center;
-    margin-top: 10px;
-    font-weight: normal;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: normal;
 }
 
-
 .engname {
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: normal;
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: normal;
 }
 
 body {
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    
-
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .mybtn {
-    display: inline-block;
-    background-color: white;
-    border-color: gray;
-    padding: 5px 10px;
-    border-radius: 10px;
-    color: grey;
-    cursor: pointer;
-    transition-duration: 0.4s;
-    align-items: center;
-    position: relative;
+  display: inline-block;
+  background-color: white;
+  border-color: gray;
+  padding: 5px 10px;
+  border-radius: 10px;
+  color: grey;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  align-items: center;
+  position: relative;
 }
 
 .mybtn1:hover {
-    background-color: lightgray;
+  background-color: lightgray;
 }
 
 .btncenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .title {
-    margin-bottom: 50px;
-    font-size: 60px;
-    color: rgba(56, 56, 56, 0.678);
-    text-shadow: 0px 3px 4px;
-    text-align: center;
+  margin-bottom: 50px;
+  font-size: 60px;
+  color: rgba(56, 56, 56, 0.678);
+  text-shadow: 0px 3px 4px;
+  text-align: center;
 }
 
 .myinfo {
-    text-align: center;
+  text-align: center;
 }
 
-.navbar a {  /*혜민작성(nav~관련 css)*/
-    text-decoration: none;
-    color : white;
+.navbar a {
+  /*혜민작성(nav~관련 css)*/
+  text-decoration: none;
+  color: white;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #8EACCD;
-    padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8eaccd;
+  padding: 8px 12px;
 }
 
-.nav_logo{
-    font-size: 24px;
-    color: white;
+.nav_logo {
+  font-size: 24px;
+  color: white;
 }
 
-.nav_logo i{
-    color: #D7E5CA;
+.nav_logo i {
+  color: #d7e5ca;
 }
 
 .nav_menu {
-    display: flex;
-    list-style: none;
-    padding-left: 0;
+  display: flex;
+  list-style: none;
+  padding-left: 0;
 }
 
-.nav_menu li { /*이름끼리 공간마련*/
-    padding : 8px 20px;
+.nav_menu li {
+  /*이름끼리 공간마련*/
+  padding: 8px 20px;
 }
 
-.nav_menu li:hover{ /*마우스 올리면 이름에 색상*/
-    background-color: #D7E5CA;
-    border-radius: 4px;
+.nav_menu li:hover {
+  /*마우스 올리면 이름에 색상*/
+  background-color: #d7e5ca;
+  border-radius: 4px;
 }
 
-.nav_link{
-    display: flex;
-    padding-left: 0;
+.nav_link {
+  display: flex;
+  padding-left: 0;
 }
 
-
-.nav_bar{
-    position: absolute;
-    right: 32px;
-    font-size: 24px;
-    color :  #D7E5CA;
+.nav_bar {
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color: #d7e5ca;
 }
 
-@media screen and (max-width: 768px){ /*화면이 작아지면 상단 메뉴 유동적으로 변경*/
-    .navbar {
-        flex-direction: column;
-        align-items:flex-start;
-        padding : 8px 12px;
-    }
-    .nav_menu { 
-        flex-direction: column;
-        align-items:center;
-        width: 100%;
-    }
-    .nav_menu li{
-        width: 100%;
-        text-align: center;
-    }
+@media screen and (max-width: 768px) {
+  /*화면이 작아지면 상단 메뉴 유동적으로 변경*/
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 12px;
+  }
+  .nav_menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  .nav_menu li {
+    width: 100%;
+    text-align: center;
+  }
 }
 
-.volumn { /*section간 공간 주기 위해서*/
-    height: 40px;
+.volumn {
+  /*section간 공간 주기 위해서*/
+  height: 70px;
+}
+
+.last {
+  /*하단*/
+  background-color: #6b85a0db;
+  height: 250px;
+}
+
+.last01 {
+  /*하단 부분 :리액트 3기 여러분 화이팅합시다 */
+  align-items: center;
+  justify-content: center;
+  font-family: 'Noto Sans KR', sans-serif !important;
+  font-size: 30px;
+  font-weight: 700;
+  width: 100%;
+  color: white;
+  padding: 50px 0 0 0;
+  text-align: center;
+  width: 100%;
+}
+
+.common-word {
+  /*하단 부분 :* 7조 같지만 2조😃*/
+  justify-content: center;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif !important;
+  width: 100%;
+  font-size: 20px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: white;
+}
+
+.last-word a {
+  /*하단 부분 :리액트 3기 여러분 화이팅합시다 --> <a>태그 부분 */
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif !important;
+  width: 100%;
+  font-size: 20px;
+  color: white;
+}
+
+.notice-word {
+  /*상단 공지*/
+  color: #f9f3cc;
+  font-weight: 700;
+  font-family: 'Noto Sans KR', sans-serif !important;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 30px;
+  background-color: #6b85a0db;
 }
 
 .group {
