@@ -102,6 +102,12 @@ strong {
   position: relative;
 }
 
+.mybtn.mybtn1{
+    position: relative;
+    bottom: 15px;
+   
+}
+
 .mybtn1:hover {
   background-color: lightgray;
 }
@@ -124,3 +130,11 @@ strong {
 .myinfo {
   text-align: center;
 }
+
+
+/* .group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    
+} */

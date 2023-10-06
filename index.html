@@ -1,85 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
+<head>
+  <meta charset="UTF-8" />
+  <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="css/index.css" rel="stylesheet" />
-    <script src="js/index.js"></script>
-    <title>MAIN PAGE</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link
+  />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="css/index.css" rel="stylesheet" />
+  <script src="js/index.js"></script>
+  <title>MAIN PAGE</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://kit.fontawesome.com/23079e924b.js" crossorigin="anonymous"></script>
+</head>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-    <script src="https://kit.fontawesome.com/23079e924b.js" crossorigin="anonymous"></script>
-  </head>
-
-  <style>
+<style>
     @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
     * {
-      font-family: 'Gowun Dodum', sans-serif;
+        font-family: 'Gowun Dodum', sans-serif;
     }
 
     body {
-      background-image: url('assets/img/movingbg.svg');
-      -o-background-size: 100% 100%;
-      -webkit-background-size: 100% 100%;
-      background-size: cover;
+        background-image: url('assets/img/movingbg.svg');
+        -o-background-size: 100% 100%;
+        -webkit-background-size: 100% 100%;
+        background-size: cover;
     }
 
     .section01 {
-      color: black;
-      background-image: url('./assets/img/background.png');
-      height: 300px;
-      /*변경필요*/
+        color: black;
+        background-image: url('./assets/img/background.png');
+        height: 300px;
+        /*변경필요*/
 
-      background-position: center;
-      background-size: cover;
+        background-position: center;
+        background-size: auto;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
       width: 100%;
     }
-  </style>
+</style>
 
-  <script>
-    //3. $(document).ready(function()) 기능 필요없어서 바로 꺼내쓰기
-    //저장된 데이터 읽기 (getDocs)
-    let url = 'http://spartacodingclub.shop/sparta_api/weather/seoul';
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        //  console.log(data['temp']);
-
-        let temp = data['temp'];
-        if (temp > 20) {
-          $('#msg').text('더움🫠 ');
-        } else {
-          $('#msg').text('추움🥶 ');
-        }
-      });
-  </script>
+<script>
+  //3. $(document).ready(function()) 기능 필요없어서 바로 꺼내쓰기
+  //저장된 데이터 읽기 (getDocs)
+  let url = 'http://spartacodingclub.shop/sparta_api/weather/seoul';
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      //  console.log(data['temp']);
+    
+      let temp = data['temp'];
+      if (temp > 20) {
+        $('#msg').text('더움🫠 ');
+      } else {
+        $('#msg').text('추움🥶 ');
+      }
+    });
+</script>
 
   <body>
     <div class="notice">
@@ -156,118 +156,123 @@
         </p>
       </div>
     </section>
-
+    
+    <div class="volumn"></div>
+    
     <section class="section03">
       <div class="p-5 mb-4 bg-body-tertiary rounded-3">
         <div class="container-fluid py-5">
           <div class="title">Team Member</div>
-          <div style="display: flex; justify-content: space-between">
-            <div class="profile-card">
-              <div class="image">
-                <img src="assets/img/lsh-thumb.png" class="profile-img" />
-                <h3 class="korname">이 상 현</h3>
-                <h4 class="engname">Sanghyeon Lee</h4>
-                <div class="myinfo">
-                  <p>1994.07.27</p>
-                  <p>INFJ</p>
-                  <p>프론트엔드 개발자로 전환하자!</p>
-                </div>
-                <div class="btncenter">
-                  <button class="mybtn mybtn1" onclick="myFunction1()">more</button>
-                  <script>
-                    function myFunction1() {
-                      confirm('이동하시겠습니까?');
-                      location.href = 'details/lsh.html';
-                    }
-                  </script>
+          <div style="display: flex; justify-content: space-around;">
+            
+            <div class="group">
+              <div class="profile-card">
+                <div class="image">
+                  <img src="assets/img/lsh-thumb.png" class="profile-img" />
+                  <h3 class="korname">이 상 현</h3>
+                  <h4 class="engname">Sanghyeon Lee</h4>
+                  <div class="myinfo">
+                    <p>1994.07.27</p>
+                    <p>INFJ</p>
+                    <p>프론트엔드 개발자로 전환하자!</p>
+                  
+                  </div>
                 </div>
               </div>
+              <div class="btncenter">
+                <button class="mybtn mybtn1" onclick="myFunction1()">more</button>
+                <script type="text/javascript">
+                  function myFunction1() {
+                    confirm("이동하시겠습니까?")
+                    location.href = "details/lsh.html";
+                  }
+                </script>
+              </div>
+            
             </div>
-
-            <div class="profile-card">
-              <div class="image">
-                <img src="assets/img/hw.jpg" class="profile-img" />
-                <h3 class="korname">박 희 원</h3>
-                <h4 class="engname">Heewon Park</h4>
-                <div class="myinfo">
-                  <p>1997.06.14</p>
-                  <p>ISFJ</p>
-                  <p>포기하지 말자!!</p>
-                </div>
-                <div class="btncenter">
-                  <button class="mybtn mybtn1" onclick="myFunction2()">more</button>
-                  <script type="text/javascript">
-                    function myFunction2() {
-                      confirm('이동하시겠습니까?');
-                      location.href = 'details/phw.html';
-                    }
-                  </script>
+            
+            <div class="group">
+              <div class="profile-card">
+                <div class="image">
+                  <img src="assets/img/hw.jpg" class="profile-img" />
+                  <h3 class="korname">박 희 원</h3>
+                  <h4 class="engname">Heewon Park</h4>
+                  <div class="myinfo">
+                    <p>1997.06.14</p>
+                    <p>ISFJ</p>
+                    <p>포기하지 말자!!</p>
+                  </div>
                 </div>
               </div>
-            </div>
-
-            <div class="profile-card">
-              <div class="image">
-                <img src="assets/img/cmg.png" class="profile-img" />
-                <h3 class="korname">최 민 권</h3>
-                <h4 class="engname">Minkwon Choi</h4>
-                <div class="myinfo">
-                  <p>1997.09.23</p>
-                  <p>ISFJ</p>
-                  <p>끝까지 열심히 하자!!</p>
-                </div>
-                <div class="btncenter">
-                  <button class="mybtn mybtn1" onclick="myFunction3()">more</button>
-                  <script>
-                    function myFunction3() {
-                      confirm('이동하시겠습니까?');
-                      location.href = 'details/cmg.html';
-                    }
-                  </script>
-                </div>
+              
+              <div class="btncenter">
+                <button class="mybtn mybtn1" onclick="myFunction2()">more</button>
+                <script type="text/javascript">
+                  function myFunction2() {
+                    confirm("이동하시겠습니까?")
+                    location.href = "details/phw.html";
+                  }
+                </script>
               </div>
             </div>
-            <div class="profile-card">
-              <div class="image">
-                <img src="assets/img/khm.jpg" class="profile-img" />
-                <h3 class="korname">김 혜 민</h3>
-                <h4 class="engname">Hyemin Kim</h4>
-                <div class="myinfo">
-                  <p>1994.09.03</p>
-                  <p>ESFP</p>
-                  <p>가보자구~!~!</p>
+            
+            
+            <div class="group">
+              <div class="profile-card">
+                <div class="image">
+                  <img src="assets/img/cmg.png" class="profile-img" />
+                  <h3 class="korname">최 민 권</h3>
+                  <h4 class="engname">Minkwon Choi</h4>
+                  <div class="myinfo">
+                    <p>1997.09.23</p>
+                    <p>ISFJ</p>
+                    <p>끝까지 열심히 하자!!</p>
+                  </div>
                 </div>
-                <div class="btncenter">
-                  <button class="mybtn mybtn1" onclick="myFunction4()">more</button>
-                  <script>
-                    function myFunction4() {
-                      confirm('이동하시겠습니까?');
-                      location.href = 'details/khm.html';
-                    }
-                  </script>
+              </div>
+              <div class="btncenter">
+                <button class="mybtn mybtn1" onclick="myFunction3()">more</button>
+                <script type="text/javascript">
+                  function myFunction3() {
+                    confirm("이동하시겠습니까?")
+                    location.href = "details/cmg.html";
+                  }
+                </script>
+              </div>
+            
+            </div>
+            
+            
+            <div class="group">
+              <div class="profile-card">
+                <div class="image">
+                  <img src="assets/img/khm.jpg" class="profile-img" />
+                  <h3 class="korname">김 혜 민</h3>
+                  <h4 class="engname">Hyemin Kim</h4>
+                  <div class="myinfo">
+                    <p>1994.09.03</p>
+                    <p>ESFP</p>
+                    <p>가보자구~!~!</p>
+                  </div>
                 </div>
+              </div>
+              <div class="btncenter">
+                <button class="mybtn mybtn1" onclick="myFunction4()">more</button>
+                <script type="text/javascript">
+                  function myFunction4() {
+                    confirm("이동하시겠습니까?")
+                    location.href = "details/khm.html";
+                  }
+                </script>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <div class="volumn"></div>
     <div class="volumn"></div>
   </body>
 
-  <script>
-    $('.slider').slick({
-      autoplay: false,
-      dots: true,
-      infinite: true,
-      speed: 500,
-      fade: true,
-      cssEase: 'linear',
-      adaptiveHeight: true,
-    });
-  </script>
   <footer>
     <section class="last">
       <div class="last01">리액트 3기 여러분 화이팅합시다!</div>
@@ -281,4 +286,18 @@
       </div>
     </section>
   </footer>
+  </div>
+</body>
+
+<script>
+  $('.slider').slick({
+    autoplay: false,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    adaptiveHeight: true,
+  });
+</script>
 </html>
