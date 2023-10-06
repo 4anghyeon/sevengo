@@ -148,3 +148,13 @@ body {
     height: 40px;
 }
 
+.group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    
+}
+
+.profile-card {
+    min-height: 450px !important;
+}
