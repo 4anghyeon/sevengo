@@ -1,108 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="css/index.css" rel="stylesheet" />
     <script src="js/index.js"></script>
     <title>MAIN PAGE</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/23079e924b.js" crossorigin="anonymous"></script>
-</head>
+  </head>
 
-<style>
+  <style>
     @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
     * {
-        font-family: 'Gowun Dodum', sans-serif;
+      font-family: 'Gowun Dodum', sans-serif;
     }
 
     body {
-        background-image: url("assets/img/movingbg.svg");
-        -o-background-size: 100% 100%;
-        -webkit-background-size: 100% 100%;
-        background-size:cover;
+      background-image: url('assets/img/movingbg.svg');
+      -o-background-size: 100% 100%;
+      -webkit-background-size: 100% 100%;
+      background-size: cover;
     }
 
     .section01 {
-        color: black;
-        background-image: url('./assets/img/background.png');
-        height: 300px;
-        /*변경필요*/
+      color: black;
+      background-image: url('./assets/img/background.png');
+      height: 300px;
+      /*변경필요*/
 
-        background-position: center;
-        background-size: cover;
+      background-position: center;
+      background-size: auto;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-        
-        width: 100vw;
+      width: 100%;
     }
-
 </style>
 
-<script>
-
+  <script>
     //3. $(document).ready(function()) 기능 필요없어서 바로 꺼내쓰기
     //저장된 데이터 읽기 (getDocs)
-    let url = "http://spartacodingclub.shop/sparta_api/weather/seoul";
-    fetch(url).then(res => res.json()).then(data => {
+    let url = 'http://spartacodingclub.shop/sparta_api/weather/seoul';
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
         //  console.log(data['temp']);
 
         let temp = data['temp'];
         if (temp > 20) {
-            $('#msg').text('더움🫠 ');
+          $('#msg').text('더움🫠 ');
         } else {
-            $('#msg').text('추움🥶 ');
+          $('#msg').text('추움🥶 ');
         }
+      });
+  </script>
 
-    })
-</script>
-
-
-<body>
+  <body>
     <header>
-        <nav class = "navbar">
-            <div class="nav_logo">
-                <i class="fa-regular fa-thumbs-up fa-bounce fa-xl"></i>
-                <a href="">7ㅏ즈아조</a>
-            </div>
-            <div class="nav_menu">
-                <li><a href="https://velog.io/@sanghyeon">상현</a></li>
-                <li><a href="https://heenee.tistory.com/">희원</a></li>
-                <li><a href="https://velog.io/@stow1234">민권</a></li>
-                <li><a href="https://zerotonine2da.tistory.com/">혜민</a></li>
-            </div>
-            <div class="nav_link">
-                <a href="#" class="nav-link px-2 text-white">현재 기온 : <span id="msg"></span></a>
-            </div>
-        </nav>
+      <nav class="navbar">
+        <div class="nav_logo">
+          <i class="fa-regular fa-thumbs-up fa-bounce fa-xl"></i>
+          <a href="">7ㅏ즈아조</a>
+        </div>
+        <div class="nav_menu">
+          <li><a target="_blank" href="https://velog.io/@sanghyeon">상현</a></li>
+          <li><a target="_blank" href="https://heenee.tistory.com/">희원</a></li>
+          <li><a target="_blank" href="https://velog.io/@stow1234">민권</a></li>
+          <li><a target="_blank" href="https://zerotonine2da.tistory.com/">혜민</a></li>
+        </div>
+        <div class="nav_link">
+          <a href="#" class="nav-link px-2 text-white">현재 기온 : <span id="msg"></span></a>
+        </div>
+      </nav>
     </header>
 
-
     <div class="main">
+      <section class="section01">
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+          <div class="container-fluid py-5">
+            <div class="logo"><img src="./assets/img/team2.png" style="width: 400px" alt="team picture" /></div>
+            <br />
+          </div>
+        </div>
+      </section>
 
-        <section class="section01">
-            <div class="p-5 mb-4 bg-body-tertiary rounded-3">
-                <div class="container-fluid py-5">
-                    <div class="logo"><img src="./assets/img/team2.png" style="width: 400px" alt="team picture"/></div>
-                    <br>
+      <div class="volumn"></div>
+
+      <section class="section02">
+        <div class="slider">
+          <p>
+            <span class="myteam">우리 팀만의 특징.</span><br />
+            <br />
+            <strong
+              >저희 팀은 "최선을 다하며 약속을 지키고 협력하는 행복한 팀"을 모토로 활동하고 있습니다.<br />
+              우리 팀은 다음과 같은 원칙을 가지고 일합니다.</strong
+            ><br />
+            <br />
+            <br />
+            <span class="us"
+              >우리는 효율적인 업무 수행을 통해 팀의 성과를 극대화하고자 합니다.<br />
+              우리는 일을 즐기며 긍정적인 분위기를 유지하려 노력합니다.<br />
+              우리는 어려움을 극복하며 즐거운 경험을 만들어내는 것을 소중히 여깁니다.<br />
+              저희 팀은 이러한 가치와 모토를 기반으로 서로 협력하며 성공적인 프로젝트를 이끌어내고, 행복한 업무 환경을
+              유지하며 함께 성장하고 있습니다.
+            </span>
+          </p>
+          <p>
+            <span class="myteam">우리 팀만의 약속.</span><br />
+            <br />
+            내일배움캠프 부트캠프 홈페이지에는 이러한 내용이 적혀있습니다.<br />
+            <br />
+            <strong
+              >“IT 취업을 희망하는 누구나 그 꿈을 이룰 수 있습니다.<br />
+              여러분의 꿈이 현실이 되도록, 끝까지 함께합니다.”</strong
+            ><br />
+            <br />
+            <br />
+            <span class="us"
+              >누군가는 본인의 실력을 향상시키기 위해 들어오고 또 누군가는 새로운 도전을 위해 이 곳 내일배움캠프에
+              들어왔습니다. 저희 팀원들 역시 새로운 도전을 위해 이 곳 내일배움캠프에 들어왔습니다.<br />
+              저희팀은 앞으로 남은 수강 기간 동안 끈임없이 배우고 노력하며 서로에게 힘이 되어주고 끝까지 함께하며 노력할
+              것을 약속 드립니다.
+            </span>
+          </p>
+        </div>
+      </section>
+
+      <div class="volumn"></div>
+
+      <section class="section03">
+        <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+          <div class="container-fluid py-5">
+            <div class="title">Team Member</div>
+            <div style="display: flex; justify-content: space-between">
+              <div class="profile-card">
+                <div class="image">
+                  <img src="assets/img/lsh-thumb.png" class="profile-img" />
+                  <h3 class="korname">이 상 현</h3>
+                  <h4 class="engname">Sanghyeon Lee</h4>
+                  <div class="myinfo">
+                    <p>1994.07.27</p>
+                    <p>INFJ</p>
+                    <p>프론트엔드 개발자로 전환하자!</p>
+                  </div>
+                  <div class="btncenter">
+                    <button class="mybtn mybtn1" onclick="myFunction1()">more</button>
+                    <script>
+                      function myFunction1() {
+                        confirm('이동하시겠습니까?');
+                        location.href = 'details/lsh.html';
+                      }
+                    </script>
+                  </div>
                 </div>
             </div>
         </section>
@@ -253,14 +328,13 @@
 
 <script>
     $('.slider').slick({
-        autoplay: false,
-        dots: true,
-        infinite: true,
-        speed: 500,
-        fade: true,
-        cssEase: 'linear',
-        adaptiveHeight: true
+      autoplay: false,
+      dots: true,
+      infinite: true,
+      speed: 500,
+      fade: true,
+      cssEase: 'linear',
+      adaptiveHeight: true,
     });
-</script>
-
+  </script>
 </html>
