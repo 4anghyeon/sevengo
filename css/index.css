@@ -41,17 +41,6 @@ body {
 
 }
 
-.profile-card {
-    width: 200px;
-    height: 400px;
-    background-color: #d7e5ca;
-    border-radius: 25px;
-    padding: 25px;
-    box-shadow: 0 5px 5px gray;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
 .mybtn {
     display: inline-block;
     background-color: white;
@@ -159,3 +148,13 @@ body {
     height: 40px;
 }
 
+.group {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    
+}
+
+.profile-card {
+    min-height: 450px !important;
+}

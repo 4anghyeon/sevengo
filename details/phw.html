@@ -1,44 +1,173 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="../css/details.css" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="../css/details.css" rel="stylesheet" />
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8="
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="../js/details.js"></script>
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+      integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .img-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        justify-content: center;
+      }
 
-<body>
+      .img-container img {
+        /* max-width: 300px;
+        width: 100%;
+        max-height: 400px; */
+        max-width: 300px;
+        width: 100%;
+
+        height: 400px;
+      }
+
+      @media (max-width: 768px) {
+        .img-container img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .title {
+        display: flex;
+        justify-content: center;
+        font-size: 30px;
+        padding-bottom: 20px;
+        border-bottom: 2px solid lightgray;
+        margin-top: 10px;
+        margin-bottom: 20px;
+      }
+
+      .keyword-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+      }
+
+      .keyword {
+        background-color: whitesmoke;
+        border-radius: 10%;
+        margin: 5px;
+        width: 260px;
+        height: 150px;
+        padding: 20px;
+      }
+
+      #icon {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: center;
+      }
+
+      .fa-brands {
+        color: rgba(164, 158, 158, 0.833);
+        margin-top: 50px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+      }
+
+      .fa-solid {
+        color: rgba(164, 158, 158, 0.833);
+        margin-top: 50px;
+        margin-bottom: 20px;
+        margin-left: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
     <header>
-        <div class="button-box">
-            <div>
-                <a href="../index.html"><button type="button" class="button">🏠 메인</button></a>
-            </div>
-            <div>
-                내일배움캠프 미니 프로젝트 A02조 7ㅏ즈아
-            </div>
-            <div id="memberButtonBox"></div>
+      <div class="button-box">
+        <div>
+          <a href="../index.html"><button type="button" class="button">🏠 메인</button></a>
         </div>
+        <div>내일배움캠프 미니 프로젝트 A02조 7ㅏ즈아</div>
+        <div id="memberButtonBox"></div>
+      </div>
     </header>
     <main>
-        <article class="detail-layout">
-            <!-- 이곳에 작성 -->
-        </article>
-        <div class="comment-container">
-            <h3><span id="memberName"></span>님에게 한마디를 입력해보세요</h3>
-            <div class="comment-box">
-                <textarea id="commentInput" rows="1"></textarea>
-                <button id="commentEnterButton" class="button bg-green">입력</button>
-            </div>
-            <hr />
-            <div id="commentList" class="comment-list">
-            </div>
+      <article class="detail-layout">
+        <!-- 이곳에 작성 -->
+        <div class="title"><strong>About Me</strong></div>
+        <div class="img-container">
+          <img src="../assets/img/phw.suwon.jpg" alt="Suwon" width="300" height="400" />
+          <img src="../assets/img/phw.swing.jpg" alt="Swing" width="300" height="400" />
+          <img src="../assets/img/phw.bali.jpg" alt="Bali" width="300" height="400" />
         </div>
-    </main>
-</body>
 
+        <div class="keyword-container">
+          <div class="keyword">
+            <p>
+              <strong style="text-align: center">Personality</strong><br />
+              #ISFJ <br />
+              #인싸 중에 아싸 #아싸 중에 인싸<br />
+              #프로상담러 #차분함 #배려 #끈기<br />
+              #재밌음 #장난치는거좋아함
+            </p>
+          </div>
+
+          <div class="keyword">
+            <p>
+              <strong style="text-align: center">Like</strong><br />
+              #여행 #예쁜옷 #예쁜카페 #동물 <br />
+              #사진찍기 #필름카메라 #다양한경험<br />
+              #소주 #silver #레서팬더 #정리정돈 #코딩(좋아하려고노력중)
+            </p>
+          </div>
+
+          <div class="keyword">
+            <p>
+              <strong style="text-align: center">Want to be</strong><br />
+              프론트엔드 개발자를 꿈꾸는 박희원입니다. 지금은 많이 부족하지만 열심히 노력해서 성장해나가는 개발자가 되고
+              싶습니다. 잘 부탁드립니다
+            </p>
+          </div>
+        </div>
+
+        <div id="icon">
+          <div>
+            <a
+              style="text-decoration: none"
+              href="https://www.instagram.com/hxxwxnn/"
+              class="fa-brands fa-instagram fa-2xl"
+            ></a>
+          </div>
+          <div>
+            <a style="text-decoration: none" href="https://heenee.tistory.com/" class="fa-solid fa-t fa-2xl"></a>
+          </div>
+        </div>
+      </article>
+      <div class="comment-container">
+        <h3><span id="memberName"></span> 님에게 한마디를 입력해보세요</h3>
+        <div class="comment-box">
+          <textarea id="commentInput" rows="1"></textarea>
+          <button id="commentEnterButton" class="button bg-blue">입력</button>
+        </div>
+        <hr />
+        <div id="commentList" class="comment-list"></div>
+      </div>
+    </main>
+  </body>
 </html>
