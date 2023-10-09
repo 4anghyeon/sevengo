@@ -15,8 +15,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
     <script type="module" src="../js/details.js"></script>
 </head>
-<style>
-    .name-1{
+<Style>
+        .name-1{
     color: #87CEEB;
     text-align: center;
     font-size: 45px;
@@ -44,74 +44,31 @@
     font-size: 25px;
     color: #87CEEB;
 }
-#interest{
-    font-family: Nanum Pen Script;
-    font-size: 55px;
-    color: #87CEEB;
-    font-weight: 700; 
-}
-.mi{
-    text-align: center;
-}
-.material-symbols-outlined{
-    font-size: 55px;
-    letter-spacing : 0.7em;
-}
-.profile-img1{
-    display: block;
-    width: 350px;
-    height: 450px;
-    border-radius: 95px;
-    position: relative;
-    left: 20%;
-    margin-bottom: 30px;
-}
-.memo1{
-    position: relative;
-    text-align: left;
-    bottom: 340px;
-    margin: 0 110px;
-    font-size: 23px;
-    left: 40%;
-}
-.profile-img2{
-    display: block;
-    width: 350px;
-    height: 450px;
-    border-radius: 95px;
-    position: relative;
-    left: 60%;
-    margin-bottom: 30px;
-}
-.memo2{
-    position: relative;
-    text-align: left;
-    bottom: 240px;
-    margin: -50px 170px;
-    font-size: 25px;
-}
-.profile-img3{
-    display: block;
-    width: 350px;
-    height: 450px;
-    border-radius: 95px;
-    position: relative;
-    left: 20%;
-    margin-bottom: 30px;
-}
-.memo3{
-    position: relative;
-    text-align: left;
-    bottom: 340px;
-    margin: 0 110px;
-    font-size: 23px;
-    left: 40%;
-}
-strong{
-    color: #87CEEB;
-}
-</style>
+      .subtitle {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 25px;
+      }
 
+      .memo {
+        border-radius: 10%;
+        margin: 5px;
+        width: 260px;
+        height: 150px;
+        padding: 20px;
+      }
+      .my-img {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        text-align: center;
+        gap: 30px;
+        justify-content: center;
+      }
+
+</Style>
 <body>
     <header>
         <div class="button-box">
@@ -126,58 +83,56 @@ strong{
     </header>
     <main>
         <article class="detail-layout">
-            <!-- 이곳에 작성 -->
             <div class="mytitle">
-            <p class="name-1">ABOUT</p>
-            <img src="../assets/img/cmg.png"class="profile-img" alt="min gwon image">
-            <div class="title">
-            <p class="p-2">FULL NAME</p>
-            <p>최 민 권</p>
-            <p class="p-2">E-MAIL</p>
-            <p>n970923@naver.com</p>
-            <p class="p-2">BLOG</p>
-            <p></p><a href=https://velog.io/@stow1234 style="text-decoration: none; color: black;">https://velog.io/@stow1234</a></p>
-            <p class="p-2">H.P</p>
-            <p>010 9111 0931</p>
-            <div class="mi">
-            <p id="interest">my interest</p>
-            <span class="material-symbols-outlined">
-            pets
-            <span class="material-symbols-outlined">
-            stadia_controller
-            </span>
-            <span class="material-symbols-outlined">
-            music_note
-            </span>
-            <span class="material-symbols-outlined">
-            sports_baseball
-            </span>
+                <p class="name-1">ABOUT</p>
+                <img src="../assets/img/cmg.png"class="profile-img" alt="min gwon image">
+                <div class="title">
+                <p class="p-2">FULL NAME</p>
+                <p>최 민 권</p>
+                <p class="p-2">E-MAIL</p>
+                <p>n970923@naver.com</p>
+                <p class="p-2">BLOG</p>
+                <p></p><a href=https://velog.io/@stow1234 style="text-decoration: none; color: black;">https://velog.io/@stow1234</a></p>
+                <p class="p-2">H.P</p>
+                <p>010 9111 0931</p>
         </div>
-    </div>
-    </div>
-    <img src="../assets/img/cmg2.png"class="profile-img1" alt="min gwon image">
-    <p class="memo1">안녕하세요.<br>
-        내일 배울 캠프 3기에 참가하게된 최민권 입니다.<br>
-        회사 다니면서 프론트엔드에
-        관심이 생겨 개발자로<br>도전해보려고 합니다.<br>
-        5개월동안 12시간 공부가 쉽지만은 않겠지만,<br>3기 수강생 여러분들
-        다 같이 힘내 멋지게 수료 했으면 좋겠습니다!!</p>
-        <img src="../assets/img/img-3.png"class="profile-img2" alt="min gwon image">
-        <P class="memo2">저의 협업 스타일은 팀원들에게 최대한 피해를 주지 않고<br>
-            맡은 역할을 최대한 수행하는 편입니다.<br>
-            또한 팀원들이 업무 중 막힌 부분이 있으면<br>
-            최대한 같이 봐주며 혼자가 아닌 다 같이<br>
-            해결하는 걸 좋아하는 편입니다.</p></P>
-            <img src="../assets/img/cmg1.png"class="profile-img3" alt="min gwon image">
-            <p class="memo3">저의 장점은 <strong>"어느 것에 빠지면 그것에만 집중한다"</strong>가 장점인 것 같습니다!<br>
-                어릴 적부터 무언가에 빠지면 그것만 계속하는 습관(?)이 있었는데<br>
-                그 습관이 지금까지 이어지고 있습니다! 어릴 때는<br>
-                무언가에 빠지면 단순 호기심으로
-                꾸준히 했던 거 같은데<br>
-                성인이 된 지금 업무를 하거나
-                과제를할 때 한 가지에 몰두하는 게 저에게<br>
-                좋게 작용하는 것 같아
-                가장 큰 장점이 아닌가 싶습니다!</p>
+        <div class="my-img">
+            <img src="../assets/img/img-2.png" width="300" height="400">
+            <img src="../assets/img/img-3.png" width="300" height="400">
+            <img src="../assets/img/img-4.png" width="300" height="400">
+          </div>
+  
+          <div class="subtitle">
+            <div class="memo">
+              <p>
+                <strong style="text-align: center; font-size: 25px;">저는..</strong><br>
+                안녕하세요, 최민권입니다.<br>
+                프론트엔드 개발에 관심이 생겨
+                이번 React 3기에 참가하게 되었습니다.
+                5개월 동안 12시간 공부가 쉽지는 않겠지만 모두 힘내서
+                좋은 개발자가 되었으면 좋겠습니다 :)
+              </p>
+            </div>
+  
+            <div class="memo">
+              <p>
+                <strong style="text-align: center;font-size: 25px;">제 장점은..</strong><br>
+                저는 이야기를 잘 들어주는 편입니다.
+                고민상담도 굉장히 좋아하는 편이고요!
+                3기 수강생 여러분들도 어려운일이있거나 힘든 일이 있어 저를 찾아오시면
+                일단 제일 귀여운 저희 집 앵두 사진을 시작으로 상담 시작하겠습니다.
+              </p>
+            </div>
+  
+            <div class="memo">
+              <p>
+                <strong style="text-align: center;font-size: 25px;">업무 스타일</strong><br>
+                전 다른 사람들과 같이 작업하는걸 선호하는 편입니다!
+                혼자 작업할때보다 효율도 더 잘나오는 것 같고
+                문제가 생길 경우에도 빠르게 해결 할 수 있는 편인듯하여 팀으로 협업하는것을 좋아합니다.
+              </p>
+            </div>
+            </div>
         </article>
         <div class="comment-container">
             <h3><span id="memberName"></span>님에게 한마디를 입력해보세요</h3>
@@ -190,6 +145,19 @@ strong{
             </div>
         </div>
     </main>
+  <footer>
+    <section class="last">
+      <div class="last01">리액트 3기 여러분 화이팅합시다!</div>
+      <p class="common-word">* 7조 같지만 2조😃</p>
+      <div class="last-word">
+        <a
+            href="https://spartacodingclub.kr/?utm_source=google&utm_medium=bs&utm_campaign=online&utm_content=brand&utm_term=%EC%8A%A4%ED%8C%8C%EB%A5%B4%ED%83%80%EC%BD%94%EB%94%A9&gcl_keyword=%EC%8A%A4%ED%8C%8C%EB%A5%B4%ED%83%80%EC%BD%94%EB%94%A9&gcl_network=g&gclid=Cj0KCQjwgNanBhDUARIsAAeIcAvgdWR32S2LPQf_y41t0TkriZRepP9yTvU5H92OLLOz6w-0JeI-3d8aAmnyEALw_wcB"
+            target="_blank"
+        >스파르타 코딩클럽 공부하러 가기👉👉
+        </a>
+      </div>
+    </section>
+  </footer>
 </body>
 
 </html>

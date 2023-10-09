@@ -3,14 +3,13 @@
     padding: 0;
     box-sizing: border-box;
   }
-body {
-    background: #F9F3CC;
+  body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
-
-.slider {
+  }
+  
+  .slider {
     width: 600px;
     height: 400px;
     margin: 0 auto;
@@ -18,68 +17,68 @@ body {
     border-radius: 10px;
     padding: 36px;
     background: white;
-    
-}
-
-.slick-dots {
+  }
+  
+  .slick-dots {
     bottom: 10px;
-}
-
-.slick-dots li button:before {
+  }
+  
+  .slick-dots li button:before {
     font-size: 10px;
     line-height: 10px;
     color: #fff;
-}
-.myteam{
+  }
+  .myteam {
     color: #999;
     font-size: 24px;
     font-weight: 700;
     line-height: 20px;
-}
-strong{
+  }
+  strong {
     font-size: 20px;
     font-weight: 700;
     line-height: 35px;
     margin-top: 14px;
-}
-.us{
+  }
+  .us {
     color: #333;
     font-size: 16px;
     line-height: 28px;
     margin-top: 500px auto;
-}
-.slick-dots { width: 85% !important; }
-
-.image {
+  }
+  .slick-dots {
+    width: 85% !important;
+  }
+  
+  .image {
     position: relative;
     width: 150px;
     height: 150px;
     border-radius: 50%;
     padding: 5px;
     border: 1px solid transparent;
-}
-
-.image .profile-img {
+  }
+  
+  .image .profile-img {
     height: 100%;
     width: 100%;
     object-fit: cover;
     border-radius: 50%;
-}
-
-.korname {
+  }
+  
+  .korname {
     text-align: center;
     margin-top: 10px;
     font-weight: normal;
-}
-
-.engname {
+  }
+  
+  .engname {
     text-align: center;
     margin-bottom: 20px;
     font-weight: normal;
-}
-
-
-.profile-card {
+  }
+  
+  .profile-card {
     width: 200px;
     height: 400px;
     background-color: #d7e5ca;
@@ -88,9 +87,9 @@ strong{
     box-shadow: 0 5px 5px gray;
     margin-left: 20px;
     margin-right: 20px;
-}
-
-.mybtn {
+  }
+  
+  .mybtn {
     display: inline-block;
     background-color: white;
     border-color: gray;
@@ -101,27 +100,42 @@ strong{
     transition-duration: 0.4s;
     align-items: center;
     position: relative;
-}
-
-.mybtn1:hover {
+  }
+  
+  .mybtn.mybtn1{
+      position: relative;
+      bottom: 15px;
+     
+  }
+  
+  .mybtn1:hover {
     background-color: lightgray;
-}
-
-.btncenter {
+  }
+  
+  .btncenter {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 30px;
-}
-
-.title {
+  }
+  
+  .title {
     margin-bottom: 50px;
     font-size: 60px;
     color: rgba(56, 56, 56, 0.678);
     text-shadow: 0px 3px 4px;
     text-align: center;
-}
-
-.myinfo {
+  }
+  
+  .myinfo {
     text-align: center;
-}
+  }
+  
+  
+  /* .group {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      
+  } */
+  
