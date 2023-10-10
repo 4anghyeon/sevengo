@@ -19,6 +19,7 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
   />
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link
@@ -79,7 +80,7 @@
   fetch(url)
     .then(res => res.json())
     .then(data => {
-      //  console.log(data['temp']);
+       console.log(data['temp']);
     
       let temp = data['temp'];
       if (temp > 20) {
