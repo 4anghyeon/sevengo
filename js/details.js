@@ -51,7 +51,7 @@ let memberName = '';
 // 댓글 입력 이벤트
 $('#commentEnterButton').click(async function () {
   let comment = $('#commentInput').val();
-  let date = new Date().toLocaleString();
+  let date = new Date().toISOString();
 
   let doc = {
     comment,
@@ -69,16 +69,25 @@ const readComments = async () => {
   // 전체 댓글 불러오기
   let docs = await getDocs(collection(db, 'comments'));
   $('#commentList').empty();
+  let commentList = [];
 
   docs.forEach(doc => {
     let row = doc.data();
     if (row) {
-      let date = new Date(row.date).toLocaleString('ko-KR');
-      if (date === 'Invalid Date') date = row.date;
-      // 화면의 사용자에 대한 댓글만 보여줌
-      if (row.memberName === memberName)
-        $('#commentList').append(`<div><span>${row.comment}</span><span>${date}</span></div>`);
+      commentList.push({comment: row.comment, date: row.date, memberName: row.memberName});
     }
+  });
+
+  commentList.sort((a, b) => {
+    return new Date(a.date) - new Date(b.date);
+  });
+
+  commentList.forEach(row => {
+    let date = new Date(row.date).toLocaleString('ko-KR');
+    if (date === 'Invalid Date') date = row.date;
+    // 화면의 사용자에 대한 댓글만 보여줌
+    if (row.memberName === memberName)
+      $('#commentList').append(`<div><span>${row.comment}</span><span>${date}</span></div>`);
   });
 };
 
