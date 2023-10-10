@@ -163,7 +163,7 @@
       <div class="p-5 mb-4 bg-body-tertiary rounded-3">
         <div class="container-fluid py-5">
           <div class="title">Team Member</div>
-          <div style="display: flex; justify-content: space-around;">
+          <div style="display: flex; justify-content: space-evenly;">
             
             <div class="group">
               <div class="profile-card">
@@ -183,9 +183,14 @@
                 <button class="mybtn mybtn1" onclick="myFunction1()">more</button>
                 <script type="text/javascript">
                   function myFunction1() {
-                    confirm("이동하시겠습니까?")
+                    if(confirm("이동하시겠습니까?") == true){
                     location.href = "details/lsh.html";
+                   }
+                     else{
+                    return ;
                   }
+                }     
+                  
                 </script>
               </div>
             
@@ -209,9 +214,13 @@
                 <button class="mybtn mybtn1" onclick="myFunction2()">more</button>
                 <script type="text/javascript">
                   function myFunction2() {
-                    confirm("이동하시겠습니까?")
+                    if(confirm("이동하시겠습니까?") == true){
                     location.href = "details/phw.html";
                   }
+                  else {
+                    return ;
+                  }
+                }
                 </script>
               </div>
             </div>
@@ -234,9 +243,13 @@
                 <button class="mybtn mybtn1" onclick="myFunction3()">more</button>
                 <script type="text/javascript">
                   function myFunction3() {
-                    confirm("이동하시겠습니까?")
+                    if(confirm("이동하시겠습니까?") == true){
                     location.href = "details/cmg.html";
                   }
+                  else {
+                    return ;
+                  }
+                }
                 </script>
               </div>
             
@@ -260,9 +273,13 @@
                 <button class="mybtn mybtn1" onclick="myFunction4()">more</button>
                 <script type="text/javascript">
                   function myFunction4() {
-                    confirm("이동하시겠습니까?")
+                    if(confirm("이동하시겠습니까?") == true){
                     location.href = "details/khm.html";
                   }
+                  else {
+                    return ;
+                  }
+                }
                 </script>
               </div>
             </div>
