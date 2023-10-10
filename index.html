@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
+<head>
+  <meta charset="UTF-8" />
+  <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
     />
@@ -18,15 +18,20 @@
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link
+  />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  <link
       rel="stylesheet"
       type="text/css"
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
-    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  />
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+  
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <script src="https://kit.fontawesome.com/23079e924b.js" crossorigin="anonymous"></script>
+</head>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -39,51 +44,51 @@
     @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
     * {
-      font-family: 'Gowun Dodum', sans-serif;
+        font-family: 'Gowun Dodum', sans-serif;
     }
 
     body {
-      background-image: url('assets/img/movingbg.svg');
-      -o-background-size: 100% 100%;
-      -webkit-background-size: 100% 100%;
-      background-size: cover;
+        background-image: url('assets/img/movingbg.svg');
+        -o-background-size: 100% 100%;
+        -webkit-background-size: 100% 100%;
+        background-size: cover;
     }
 
     .section01 {
-      color: black;
-      background-image: url('./assets/img/background.png');
-      height: 300px;
-      /*변경필요*/
+        color: black;
+        background-image: url('./assets/img/background.png');
+        height: 300px;
+        /*변경필요*/
 
       background-position: center;
       background-size: auto;
 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
       width: 100%;
     }
-  </style>
+</style>
 
-  <script>
-    //3. $(document).ready(function()) 기능 필요없어서 바로 꺼내쓰기
-    //저장된 데이터 읽기 (getDocs)
-    let url = 'http://spartacodingclub.shop/sparta_api/weather/seoul';
-    fetch(url)
-      .then(res => res.json())
-      .then(data => {
-        //  console.log(data['temp']);
-
-        let temp = data['temp'];
-        if (temp > 20) {
-          $('#msg').text('더움🫠 ');
-        } else {
-          $('#msg').text('추움🥶 ');
-        }
-      });
-  </script>
+<script>
+  //3. $(document).ready(function()) 기능 필요없어서 바로 꺼내쓰기
+  //저장된 데이터 읽기 (getDocs)
+  let url = 'http://spartacodingclub.shop/sparta_api/weather/seoul';
+  fetch(url)
+    .then(res => res.json())
+    .then(data => {
+      //  console.log(data['temp']);
+    
+      let temp = data['temp'];
+      if (temp > 20) {
+        $('#msg').text('더움🫠 ');
+      } else {
+        $('#msg').text('추움🥶 ');
+      }
+    });
+</script>
 
   <body>
     <div class="notice">
@@ -91,7 +96,7 @@
         [ TMI 공지 ] 추석 전에는 7조였는데,, 쉬고 오니 2조가 되었습니다. 👉 안녕하세요 7ㅏ즈아 2조입니다. 😃
       </p>
     </div>
-    `
+
 
     <header>
       <nav class="navbar">
@@ -119,7 +124,6 @@
         </div>
       </div>
     </section>
-
     <div class="volumn"></div>
 
     <section class="section02">
@@ -161,14 +165,15 @@
         </p>
       </div>
     </section>
-
+    
     <div class="volumn"></div>
-
+    
     <section class="section03">
       <div class="p-5 mb-4 bg-body-tertiary rounded-3">
         <div class="container-fluid py-5">
           <div class="title">Team Member</div>
           <div style="display: flex; justify-content: space-evenly;">
+
             <div class="group">
               <div class="profile-card">
                 <div class="image">
@@ -197,7 +202,6 @@
                 </script>
               </div>
             </div>
-
             <div class="group">
               <div class="profile-card">
                 <div class="image">
@@ -211,7 +215,6 @@
                   </div>
                 </div>
               </div>
-
               <div class="btncenter">
                 <button class="mybtn mybtn1" onclick="myFunction2()">more</button>
                 <script type="text/javascript">
@@ -226,7 +229,6 @@
                 </script>
               </div>
             </div>
-
             <div class="group">
               <div class="profile-card">
                 <div class="image">
@@ -254,7 +256,6 @@
                 </script>
               </div>
             </div>
-
             <div class="group">
               <div class="profile-card">
                 <div class="image">
@@ -302,15 +303,15 @@
     </section>
   </footer>
 
-  <script>
-    $('.slider').slick({
-      autoplay: false,
-      dots: true,
-      infinite: true,
-      speed: 500,
-      fade: true,
-      cssEase: 'linear',
-      adaptiveHeight: true,
-    });
-  </script>
+<script>
+  $('.slider').slick({
+    autoplay: false,
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear',
+    adaptiveHeight: true,
+  });
+</script>
 </html>
