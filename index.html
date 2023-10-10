@@ -5,13 +5,15 @@
   <meta
       name="viewport"
       content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-  />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <link href="css/index.css" rel="stylesheet" />
-  <script src="js/index.js"></script>
-  <title>MAIN PAGE</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <link
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link href="css/index.css" rel="stylesheet" />
+    <script src="js/index.js"></script>
+    <!--favicon-->
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" />
+    <title>7ㅏ즈아 2조</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
@@ -31,7 +33,14 @@
   <script src="https://kit.fontawesome.com/23079e924b.js" crossorigin="anonymous"></script>
 </head>
 
-<style>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://kit.fontawesome.com/23079e924b.js" crossorigin="anonymous"></script>
+    <!--모달창 디자인-->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  </head>
+
+  <style>
     @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap');
 
     * {
@@ -51,8 +60,8 @@
         height: 300px;
         /*변경필요*/
 
-        background-position: center;
-        background-size: auto;
+      background-position: center;
+      background-size: auto;
 
         display: flex;
         flex-direction: column;
@@ -88,6 +97,7 @@
       </p>
     </div>
 
+
     <header>
       <nav class="navbar">
         <div class="nav_logo">
@@ -114,7 +124,6 @@
         </div>
       </div>
     </section>
-
     <div class="volumn"></div>
 
     <section class="section02">
@@ -163,8 +172,8 @@
       <div class="p-5 mb-4 bg-body-tertiary rounded-3">
         <div class="container-fluid py-5">
           <div class="title">Team Member</div>
-          <div style="display: flex; justify-content: space-around;">
-            
+          <div style="display: flex; justify-content: space-evenly;">
+
             <div class="group">
               <div class="profile-card">
                 <div class="image">
@@ -175,7 +184,6 @@
                     <p>1994.07.27</p>
                     <p>INFJ</p>
                     <p>프론트엔드 개발자로 전환하자!</p>
-                  
                   </div>
                 </div>
               </div>
@@ -183,14 +191,17 @@
                 <button class="mybtn mybtn1" onclick="myFunction1()">more</button>
                 <script type="text/javascript">
                   function myFunction1() {
-                    confirm("이동하시겠습니까?")
+                    if(confirm("이동하시겠습니까?") == true){
                     location.href = "details/lsh.html";
+                   }
+                     else{
+                    return ;
                   }
+                }     
+                  
                 </script>
               </div>
-            
             </div>
-            
             <div class="group">
               <div class="profile-card">
                 <div class="image">
@@ -204,19 +215,20 @@
                   </div>
                 </div>
               </div>
-              
               <div class="btncenter">
                 <button class="mybtn mybtn1" onclick="myFunction2()">more</button>
                 <script type="text/javascript">
                   function myFunction2() {
-                    confirm("이동하시겠습니까?")
+                    if(confirm("이동하시겠습니까?") == true){
                     location.href = "details/phw.html";
                   }
+                  else {
+                    return ;
+                  }
+                }
                 </script>
               </div>
             </div>
-            
-            
             <div class="group">
               <div class="profile-card">
                 <div class="image">
@@ -234,15 +246,16 @@
                 <button class="mybtn mybtn1" onclick="myFunction3()">more</button>
                 <script type="text/javascript">
                   function myFunction3() {
-                    confirm("이동하시겠습니까?")
+                    if(confirm("이동하시겠습니까?") == true){
                     location.href = "details/cmg.html";
                   }
+                  else {
+                    return ;
+                  }
+                }
                 </script>
               </div>
-            
             </div>
-            
-            
             <div class="group">
               <div class="profile-card">
                 <div class="image">
@@ -260,9 +273,13 @@
                 <button class="mybtn mybtn1" onclick="myFunction4()">more</button>
                 <script type="text/javascript">
                   function myFunction4() {
-                    confirm("이동하시겠습니까?")
+                    if(confirm("이동하시겠습니까?") == true){
                     location.href = "details/khm.html";
                   }
+                  else {
+                    return ;
+                  }
+                }
                 </script>
               </div>
             </div>
