@@ -20,7 +20,7 @@
 
   <style>
     /*첫번째 구간*/
-    .top-layout{
+    .top-layout {
       display: flex;
       justify-content: center; /*가운데오게*/
     }
@@ -29,7 +29,6 @@
       display: flex;
       justify-content: center; /*가운데오게*/
       padding-bottom: 40px;
-     
     }
     .face-img {
       height: 300px;
@@ -41,9 +40,10 @@
       text-align: left;
       width: 800px;
       height: 330px;
-      padding-top:30px;
-      padding-left: -20px;
+      padding-top: 30px;
+      padding-left: 20px;
       border-radius: 4px;
+      flex-direction: column;
     }
 
     /*두번째 구간*/
@@ -103,9 +103,9 @@
       padding-left: 20px;
     }
 
-    .cell-word a{
-     text-decoration: none;
-     color : black;
+    .cell-word a {
+      text-decoration: none;
+      color: black;
     }
 
     @media screen and (max-width: 768px) {
@@ -125,7 +125,7 @@
         align-items: center; /*메뉴는 중간에 정렬하고싶음(중심축:수직)*/
         margin-top: -47px; /*밑에 색상이 사진 위로 오게*/
         width: 500px;
-    }
+      }
     }
   </style>
 
@@ -139,29 +139,35 @@
         <div id="memberButtonBox"></div>
       </div>
     </header>
-    <main>
 
+    <main>
       <article class="detail-layout">
-        <!-- 이곳에 작성 -->
-<div class="top-layout">
-        <div class="top">
-          <img class="face-img" src="../assets/img/khm.jpg" />
-          <div class="top-word back-color01">
-            <div class="cell-line"></div>
-            <h4 class="cell-text">
-                반가워요 :-) 저는 김혜민입니다. </br>
+        <div class="top-layout">
+          <div class="top">
+            <img class="face-img" src="../assets/img/khm.jpg" />
+            <div class="top-word back-color01">
+              <div class="cell-line"></div>
+              <h4 class="cell-text">
+                반가워요 :-) 저는 김혜민입니다. <br />
                 5개월동안 잘 지내면 좋겠습니다!
-            </h4>
-            <div class="cell-line"></div>
-            <p class="cell-word">
+              </h4>
+              <div class="cell-line"></div>
+              <p class="cell-word">
                 <br />
-                <i class="fa-brands fa-github fa-spin fa-xl"></i> <a target="_blank" href="https://github.com/zerotonine2da/"> https://github.com/zerotonine2da [깃허브]</a><br />
+                <i class="fa-brands fa-github fa-spin fa-xl"></i>
+                <a target="_blank" href="https://github.com/zerotonine2da/">
+                  https://github.com/zerotonine2da [깃허브]</a
+                ><br />
                 <br />
-                <i class="fa-solid fa-t fa-xl"></i><a target="_blank" href="https://zerotonine2da.tistory.com"> https://zerotonine2da.tistory.com [티스토리]</a><br />
-            </p>
+                <i class="fa-solid fa-t fa-xl"></i
+                ><a target="_blank" href="https://zerotonine2da.tistory.com">
+                  https://zerotonine2da.tistory.com [티스토리]</a
+                ><br />
+              </p>
+            </div>
           </div>
         </div>
-    </div>
+
         <div class="container-layout">
           <div class="conatiner-cell-layout">
             <img class="cell-img" src="../assets/img/khm-1.jpg" />
@@ -181,6 +187,7 @@
               </div>
             </div>
           </div>
+
           <div class="conatiner-cell-layout">
             <img class="cell-img" src="../assets/img/khm-2.png" />
             <div class="cell-common back-color02">
@@ -199,6 +206,7 @@
               </div>
             </div>
           </div>
+
           <div class="conatiner-cell-layout">
             <img class="cell-img" src="../assets/img/khm-3.jpg" />
             <div class="cell-common back-color03">
@@ -220,7 +228,6 @@
         </div>
       </article>
 
-
       <div class="comment-container">
         <h3><span id="memberName"></span>님에게 한마디를 입력해보세요</h3>
         <div class="comment-box">
@@ -231,5 +238,18 @@
         <div id="commentList" class="comment-list"></div>
       </div>
     </main>
+    <footer>
+      <section class="last">
+        <div class="last01">리액트 3기 여러분 화이팅합시다!</div>
+        <p class="common-word">* 7조 같지만 2조😃</p>
+        <div class="last-word">
+          <a
+              href="https://spartacodingclub.kr/?utm_source=google&utm_medium=bs&utm_campaign=online&utm_content=brand&utm_term=%EC%8A%A4%ED%8C%8C%EB%A5%B4%ED%83%80%EC%BD%94%EB%94%A9&gcl_keyword=%EC%8A%A4%ED%8C%8C%EB%A5%B4%ED%83%80%EC%BD%94%EB%94%A9&gcl_network=g&gclid=Cj0KCQjwgNanBhDUARIsAAeIcAvgdWR32S2LPQf_y41t0TkriZRepP9yTvU5H92OLLOz6w-0JeI-3d8aAmnyEALw_wcB"
+              target="_blank"
+          >스파르타 코딩클럽 공부하러 가기👉👉
+          </a>
+        </div>
+      </section>
+    </footer>
   </body>
 </html>

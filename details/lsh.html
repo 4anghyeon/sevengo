@@ -2,15 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="../css/details.css" rel="stylesheet">
-    <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js" integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
-    <script type="module" src="../js/details.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="../css/details.css" rel="stylesheet">
+  <title>Document</title>
+  <script src="https://code.jquery.com/jquery-3.7.1.slim.min.js"
+      integrity="sha256-kmHvs0B+OpCW5GVHUNjv9rOmY0IvSIRcf7zGUDTDQM8=" crossorigin="anonymous"></script>
+  <script type="module" src="../js/details.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+      integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
 </head>
 <style>
     .introduce {
@@ -19,15 +21,18 @@
         justify-content: center;
         align-items: center;
     }
+
     .name-1 {
         font-weight: bold;
         font-size: 1.5rem;
     }
+
     .name-2 {
         margin-left: 10px;
         font-weight: bold;
         font-size: 2rem;
     }
+
     .profile-img {
         border-radius: 5%;
         width: 200px;
@@ -103,7 +108,7 @@
         height: 75%;
         width: 80%;
     }
-    
+
     .card-info {
         display: flex;
         flex-direction: column;
@@ -118,77 +123,93 @@
 </style>
 
 <body>
-    <header>
-        <div class="button-box">
-            <div>
-                <a href="../index.html"><button type="button" class="button">🏠 메인</button></a>
+  <header>
+    <div class="button-box">
+      <div>
+        <a href="../index.html">
+          <button type="button" class="button">🏠 메인</button>
+        </a>
+      </div>
+      <div>
+        내일배움캠프 미니 프로젝트 A02조 7ㅏ즈아
+      </div>
+      <div id="memberButtonBox"></div>
+    </div>
+  </header>
+  <main>
+    <article class="detail-layout">
+      <!-- 이곳에 작성 -->
+      
+      <div class="introduce">
+        <span class="name-1">HELLO I'M</span><span class="name-2">SANGHYEON</span>
+        <div style="display: flex; padding-top: 20px">
+          <div class="flip">
+            <div class="card">
+              <!-- 앞면 -->
+              <div class="front">
+                <img src="../assets/img/lsh-thumb.png" class="profile-img" alt="sanghyeon image" />
+              </div>
+              <!-- 뒷면 -->
+              <div class="back">
+                <div class="card-info">
+                  <span>이상현</span>
+                  <span>🎂 1994. 07. 27</span>
+                  <span>🏡 SEOUL, KOREA</span>
+                  <span>🧬 INFJ</span>
+                </div>
+              </div>
             </div>
-            <div>
-                내일배움캠프 미니 프로젝트 A02조 7ㅏ즈아
-            </div>
-            <div id="memberButtonBox"></div>
+          </div>
+          
+          <div class="private-info">
+            <h3>HOW TO CONTACT</h3>
+            <span>📞 Phone: <a href="tel:010-9338-3810">010-9338-3810</a></span>
+            <span>📧 Email: <a target="_blank" href="mailto:4anghyeon@gmail.com">4anghyeon@gmail.com</a></span>
+            <span>🐱 Github: <a href="https://github.com/4anghyeon">4anghyeon</a></span>
+          </div>
         </div>
-    </header>
-    <main>
-        <article class="detail-layout">
-            <!-- 이곳에 작성 -->
-            
-            <div class="introduce">
-                <span class="name-1">HELLO I'M</span><span class="name-2">SANGHYEON</span>
-                <div style="display: flex; padding-top: 20px">
-                    <div class="flip">
-                        <div class="card">
-                            <!-- 앞면 -->
-                            <div class="front">
-                                <img src="../assets/img/lsh-thumb.png" class="profile-img" alt="sanghyeon image"/>
-                            </div>
-                            <!-- 뒷면 -->
-                            <div class="back">
-                                <div class="card-info">
-                                    <span>이상현</span>
-                                    <span>🎂 1994. 07. 27</span>
-                                    <span>🏡 SEOUL, KOREA</span>
-                                    <span>🧬 INFJ</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="private-info">
-                        <h3>HOW TO CONTACT</h3>
-                        <span>📞 Phone: <a href="tel:010-9338-3810">010-9338-3810</a></span>
-                        <span>📧 Email: <a target="_blank" href="mailto:4anghyeon@gmail.com">4anghyeon@gmail.com</a></span>
-                        <span>🐱 Github: <a href="https://github.com/4anghyeon">4anghyeon</a></span>
-                    </div>
-                </div>
-            </div>
-            <div class="introduce-detail-box">
-                <div>
-                    <h3 class="sub-title">🙋🏻‍♂️ 저는요</h3>
-                    <p>안녕하세요 이번 내일배움캠프 React 트랙에 참가하게 된 <strong>이상현</strong>입니다. 이번 기회를 통해 프론트엔드 개발자로 발돋움 하고자 참여하게 되었습니다! 앞으로 남은 5개월 잘 부탁드리겠습니다~</p>
-                </div>
-                <div>
-                    <h3 class="sub-title">😎 장점</h3>
-                    <p>어떠한 문제가 생겼을 때 단순한 해결책만 찾지 않고, 근본적인 문제까지 알아내고, 그 과정을 미래의 나 혹은 타인에게 도움이 되고자 항상 기록을 남긴다는 습관이 있습니다.</p>
-                </div>
-                <div>
-                    <h3 class="sub-title">🤝 협업 스타일</h3>
-                    <p>팀에 피해를 주지 않도록 맡은 바를 최대한 해내는 편입니다. 또한 팀원의 의견을 수용적으로 듣고, 코딩 중 알아낸 정보, 지식들을 혼자 갖고 있지 않고 팀원 모두에게 공유합니다.</p>
-                </div>
-            </div>
-        
-        </article>
-        <div class="comment-container">
-            <h3><span id="memberName"></span>님에게 한마디를 입력해보세요</h3>
-            <div class="comment-box">
-                <textarea id="commentInput" rows="1"></textarea>
-                <button id="commentEnterButton" class="button bg-green">입력</button>
-            </div>
-            <hr />
-            <div id="commentList" class="comment-list">
-            </div>
+      </div>
+      <div class="introduce-detail-box">
+        <div>
+          <h3 class="sub-title">🙋🏻‍♂️ 저는요</h3>
+          <p>안녕하세요 이번 내일배움캠프 React 트랙에 참가하게 된 <strong>이상현</strong>입니다. 이번 기회를 통해 프론트엔드 개발자로 발돋움 하고자 참여하게 되었습니다! 앞으로 남은
+             5개월 잘 부탁드리겠습니다~</p>
         </div>
-    </main>
+        <div>
+          <h3 class="sub-title">😎 장점</h3>
+          <p>어떠한 문제가 생겼을 때 단순한 해결책만 찾지 않고, 근본적인 문제까지 알아내고, 그 과정을 미래의 나 혹은 타인에게 도움이 되고자 항상 기록을 남긴다는 습관이 있습니다.</p>
+        </div>
+        <div>
+          <h3 class="sub-title">🤝 협업 스타일</h3>
+          <p>팀에 피해를 주지 않도록 맡은 바를 최대한 해내는 편입니다. 또한 팀원의 의견을 수용적으로 듣고, 코딩 중 알아낸 정보, 지식들을 혼자 갖고 있지 않고 팀원 모두에게 공유합니다.</p>
+        </div>
+      </div>
+    
+    </article>
+    <div class="comment-container">
+      <h3><span id="memberName"></span>님에게 한마디를 입력해보세요</h3>
+      <div class="comment-box">
+        <textarea id="commentInput" rows="1"></textarea>
+        <button id="commentEnterButton" class="button bg-green">입력</button>
+      </div>
+      <hr />
+      <div id="commentList" class="comment-list">
+      </div>
+    </div>
+  </main>
+  <footer>
+    <section class="last">
+      <div class="last01">리액트 3기 여러분 화이팅합시다!</div>
+      <p class="common-word">* 7조 같지만 2조😃</p>
+      <div class="last-word">
+        <a
+            href="https://spartacodingclub.kr/?utm_source=google&utm_medium=bs&utm_campaign=online&utm_content=brand&utm_term=%EC%8A%A4%ED%8C%8C%EB%A5%B4%ED%83%80%EC%BD%94%EB%94%A9&gcl_keyword=%EC%8A%A4%ED%8C%8C%EB%A5%B4%ED%83%80%EC%BD%94%EB%94%A9&gcl_network=g&gclid=Cj0KCQjwgNanBhDUARIsAAeIcAvgdWR32S2LPQf_y41t0TkriZRepP9yTvU5H92OLLOz6w-0JeI-3d8aAmnyEALw_wcB"
+            target="_blank"
+        >스파르타 코딩클럽 공부하러 가기👉👉
+        </a>
+      </div>
+    </section>
+  </footer>
 </body>
 
 </html>
